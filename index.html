@@ -14,14 +14,21 @@
 </head>
 
 <body>
-    <h> Memory Game ! </h1>
+    <h1>Memory Game ! </h1>
 
     <!--  Game Section containing the pictures -->
     <section>
         <h2></h2>
 
-        <div class="wrapper">
-            <div><img src=" /assets/images/img1.jpeg"></div>
+        <div class="game-area">
+            <div class="control-area">
+                <button class="btn btn--big btn--green"><i class="fa-solid fa-circle-6"></i></button>
+                <button class="btn btn--big btn--red"><i class="fa-solid fa-circle-8"></i></button>
+                <button class="btn btn--big btn--red"><i class="fa-solid fa-circle-10"></i></button>
+
+            </div>
+            <div><img src=" /assets/images/img1.jpeg">
+            </div>
             <div><img src="/assets/images/img2.jpeg"></div>
             <div><img src="/assets/images/img3.jpeg"></div>
             <div><img src="/assets/images/img4.jpeg"></div>
@@ -31,6 +38,13 @@
             <div><img src="/assets/images/img8.jpeg"></div>
             <div><img src="/assets/images/img9.jpeg"></div>
             <div><img src="/assets/images/img10.jpeg"></div>
+
+        </div>
+        <div class="score-area">
+            <div>Matches Won <span id="score">0</span>
+            </div>
+            <div>Keep trying <span id="incorrect">0</span>
+            </div>
         </div>
     </section>
 
