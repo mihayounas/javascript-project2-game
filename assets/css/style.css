@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
 
-body {
-    background-color: rgb(206, 224, 232);
+* {
+
     font-family: "Josefin", sans-serif;
     text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Display of the front and back side of the displayed cards */
+
+.card .front-side img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
 
 
 }
@@ -12,36 +25,33 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
 
 
 }
 
-.card .front-side img {
-    display: none;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    width: 150px;
-    height: 150px;
-    margin: 5px;
-
-}
+/* Game area wrapper styling */
 
 .wrapper-game-area {
-    height: 500px;
-    width: 680px;
+    height: 820px;
+    width: 820px;
     background: pink;
     border-radius: 10px;
-    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 5px;
+    column-count: 3;
 }
 
 .cards,
 .card {
     cursor: pointer;
-    height: calc(100% /3 - 20px);
-    width: calc(100% / 4 - 20px);
+
 }
 
 .cards,
@@ -50,11 +60,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .cards {
     height: 100%;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-between;
+    border-radius: 5px;
+
+
 }
