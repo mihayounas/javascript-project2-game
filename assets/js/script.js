@@ -44,26 +44,79 @@ function createCard(imgSrc) {
 
     document.getElementById('cards-container').appendChild(li);
 }
-createCard('/assets/images/img2.jpeg');
-createCard('/assets/images/img3.jpeg');
-createCard('/assets/images/img4.jpeg');
-createCard('/assets/images/img5.jpeg');
-createCard('/assets/images/img6.jpeg');
-createCard('/assets/images/img7.jpeg');
-createCard('/assets/images/img8.jpeg');
-createCard('/assets/images/img9.jpeg');
-createCard('/assets/images/img10.jpeg');
-createCard('/assets/images/img11.png');
-createCard('/assets/images/img12.png');
+let cardArray = [{
+        name: 'cat',
+        img: '/assets/images/img1.jpeg'
+    },
+    {
+        name: 'cat',
+        img: '/assets/images/img2.jpeg'
+    },
+    {
+        name: 'koala',
+        img: '/assets/images/img3.jpeg'
+    },
+    {
+        name: 'koala',
+        img: '/assets/images/img4.jpeg'
+    },
+    {
+        name: 'unicorn',
+        img: '/assets/images/img5.jpeg'
+    },
+    {
+        name: 'unicorn',
+        img: '/assets/images/img6.jpeg'
+    },
+    {
+        name: 'cat2',
+        img: '/assets/images/img7.jpeg'
+    },
+    {
+        name: 'cat2',
+        img: '/assets/images/img8.jpeg'
+    },
+    {
+        name: 'cutewhale',
+        img: '/assets/images/img9.jpeg'
+    },
+    {
+        name: 'cutewhale',
+        img: '/assets/images/img10.jpeg'
+    },
+    {
+        name: 'cat3',
+        img: '/assets/images/img11.png'
+    },
+    {
+        name: 'cat3',
+        img: '/assets/images/img12.png'
+    },
+    {
+        name: 'elephant',
+        img: '/assets/images/img13.jpeg'
+    },
+    {
+        name: 'elephant',
+        img: '/assets/images/img14jpeg.jpeg'
+    },
 
-const card = document.querySelector('.flip-card')
-const inner = card.addEventListener('click', () => {
-    document.querySelector('.flip-card-inner').style.transform = 'rotateY(180deg)'
-})
+]
+
+
+const cards = document.querySelector('.cards')
 
 function runGame() {
+    for (let i = 0; i < cardArray; i++) {
+        var card = document.createElement('img')
+        card.setAttribute('src', '/assets/images/front-side.png')
+        card.setAttribute('data-id', i)
+        card.addEventListener('click', flipCard)
+        cards.appendChild(card)
+    }
 
 }
+runGame()
 
 function checkCard() {
 
