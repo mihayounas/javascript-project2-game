@@ -9,41 +9,13 @@
 }
 
 /* Display of the front and back side of the displayed cards */
-
-.card .front-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    width: 170px;
-    height: 170px;
-    border: 6px double white;
-    border-radius: 20px;
-    position: relative;
-
-
-}
-
-.card .back-side img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    width: 170px;
-    height: 170px;
-    border-radius: 20px;
-    border: 6px double black;
-    position: absolute;
-}
-
 /* Game area wrapper styling */
 
 .wrapper-game-area {
-    height: 520px;
     width: 720px;
     background: pink;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0 auto;
     flex-direction: column;
     flex-wrap: wrap;
@@ -51,31 +23,10 @@
     column-count: 3;
 }
 
-.cards,
-.card {
-    cursor: pointer;
-    justify-content: space-between;
-    perspective: 800px;
-    transform-style: preserve-3d;
-
-
-}
-
-.cards,
-.card,
-.side {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.25s linear;
-    backface-visibility: hidden;
-
-
-}
-
 .cards {
     height: 100%;
     width: 100%;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 5px;
@@ -83,17 +34,52 @@
 
 }
 
-.card .back-side {
-    transform: rotateY(-180deg);
+.flip-card {
+    background-color: transparent;
+    width: 170px;
+    height: 170px;
+    perspective: 1000px;
+    list-style-type: none;
+    border-radius: 20px;
 }
 
-.card:hover .front-side {
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 170px;
+    height: 170px;
+    border-radius: 20px;
+}
+
+.flip-card-back {
     transform: rotateY(180deg);
+}
+
+.flip-card-front img {
+    object-fit: cover;
+    width: 170px;
+    height: 170px;
+    border-radius: 20px;
+    border: 6px double black;
 
 }
 
-.card:hover .back-side {
-    transform: rotateY(0);
-
+.flip-card-back img {
+    object-fit: cover;
+    width: 170px;
+    height: 170px;
+    border-radius: 20px;
+    border: 6px double black;
 
 }
