@@ -11,12 +11,14 @@
 /* Display of the front and back side of the displayed cards */
 
 .card .front-side img {
-    display: none;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    width: 300px;
-    height: 300px;
+    width: 170px;
+    height: 170px;
+    border: 6px double white;
+    border-radius: 20px;
+    position: relative;
 
 
 }
@@ -25,17 +27,18 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    width: 200px;
-    height: 200px;
-
-
+    width: 170px;
+    height: 170px;
+    border-radius: 20px;
+    border: 6px double black;
+    position: absolute;
 }
 
 /* Game area wrapper styling */
 
 .wrapper-game-area {
-    height: 820px;
-    width: 820px;
+    height: 520px;
+    width: 720px;
     background: pink;
     border-radius: 10px;
     display: flex;
@@ -44,13 +47,17 @@
     margin: 0 auto;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 5px;
+    padding: 10px;
     column-count: 3;
 }
 
 .cards,
 .card {
     cursor: pointer;
+    justify-content: space-between;
+    perspective: 800px;
+    transform-style: preserve-3d;
+
 
 }
 
@@ -60,6 +67,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.25s linear;
+    backface-visibility: hidden;
+
 
 }
 
@@ -67,7 +77,23 @@
     height: 100%;
     width: 100%;
     flex-wrap: wrap;
-    border-radius: 5px;
+    justify-content: space-between;
+    padding: 5px;
+
+
+}
+
+.card .back-side {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .front-side {
+    transform: rotateY(180deg);
+
+}
+
+.card:hover .back-side {
+    transform: rotateY(0);
 
 
 }
