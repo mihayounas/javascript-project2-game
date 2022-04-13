@@ -46,7 +46,8 @@ function createCard(imgSrc) {
 }
 let cardArray = ['/assets/images/img1.jpeg', '/assets/images/img2.jpeg', '/assets/images/img3.jpeg', '/assets/images/img4.jpeg', '/assets/images/img5.jpeg', '/assets/images/img6.jpeg', '/assets/images/img7.jpeg', '/assets/images/img8.jpeg', '/assets/images/img9.jpeg', '/assets/images/img10.jpeg ', '/assets/images/img11.png', '/assets/images/img12.png', ]
 
-
+cardArray.sort(() => 0.5 - Math.random());
+var chosenCards = []
 
 
 // Create game board
@@ -54,6 +55,7 @@ let cardArray = ['/assets/images/img1.jpeg', '/assets/images/img2.jpeg', '/asset
 function runGame() {
     for (i = 0; i < cardArray.length; i++) {
         createCard(cardArray[i])
+
     }
 }
 runGame()
@@ -63,39 +65,8 @@ const cardsArray = [...cardsCollection]
 cardsArray.forEach((card) => {
     card.addEventListener('click', (event) => {
         event.target.parentNode.parentNode.style.transform = 'rotateY(180deg)'
-
+        clickedCard(event)
     })
 })
 
-//Create checkYourMatch function 
-
-function checkYourMatch() {
-    var cardOption = document.querySelectorAll(cardsCollection)
-    let optionOneId = cardsChosenId[0]
-    let optionTwoId = cardsChosenId[1]
-    if (cardsChosen[0] === cardsChosen[1]) {
-        alert('There is A Match ')
-        cardOption[optionOneId].setAttribute('src', '/assets/images/blaank.jpeg')
-        cardOption[optionTwoId].setAttribute('src', '/assets/images/blaank.jpeg')
-        cardsWon.push(cardsChosen)
-    } else {
-        cards[optionOneId].setAttribute('src', '/assets/images/front-side.png')
-        cardOption[optionTwoId].setAttribute('src', '/assets/images/front-side.png')
-        alert('Sorry, Try Again ')
-    }
-    cardsChosen = []
-    cardsChosenId = []
-}
-
-
 //Create flipCard function
-
-function flipCard() {
-    let cardId = this.getAttribute('data-id')
-    cardsChosen.push(cardArray[cardId].name)
-    cardsChosenId.push(cardId)
-    this.setAttribute('src', cardArray[cardId].img)
-    if (cardsChosen.length === 2) {
-        setTimeout(checkYourMatch, 500)
-    }
-}
