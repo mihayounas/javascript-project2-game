@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let option1 = '';
     let option2 = '';
 
+
     // Sort the array in that way that it will always be randon for the player
     cardArray.sort(() => 0.5 - Math.random());
 
@@ -113,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function runGame() {
         for (i = 0; i < cardArray.length; i++) {
             createCard(cardArray[i])
+
 
         }
     }
@@ -133,67 +135,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             if (option1 !== '' && option2 !== '') {
                 if (option1 === option2) {
-                    console.log('matching')
+
+                    alert('You Found a Match')
                 } else {
-                    console.log('not matching')
+
+                    alert('Sorry Try Again!')
                     option1 = '';
                     option2 = '';
+
                 }
             }
         })
     })
 
-    // Create new board everytime the game starts
-
-    function newBoard() {
-        cardsFlipped = 0;
-        var result = '';
-        cardArray.sort(() => 0.5 - Math.random());
-        for (let i = 0; i < cardArray.length; i++) {
-            result += '<div id = "card_ ' + i + ' "onclick = "flipCard(this,\'' + cardsArray[i] + '\')" > </div>'
-        }
-        document.getElementById('cards-container').innerHTML = result;
-    }
-    //Create a flipCard function
-
-    function flipCard(card, val) {
-        if (card.innerHTML == "" && cards_values.length < 2) {
-            card.style.background = 'pink';
-            card.innerHTML = val;
-        }
-        if (cards_values.length == 0) {
-            cards_values.push(val)
-            cardIds.push(card.id);
-        } else if (cards_values.length == 1) {
-            cards_values.push(val)
-            cardIds.push(card.id);
-            if (cards_values[0] == cards_values[1]) {
-                cardsFlipped += 2;
-                //clear both arrays
-                cards_values = []
-                cardIds = [];
-                //check to see if the whole board is cleared
-                if (cardsFlipped == cardArray.lenght) {
-                    alert("Board cleared...generating new board");
-                    document.getElementById('cards-container ').innerHTML = ""
-                    newBoard()
-                }
-            } else {
-                function flip2Back() {
-                    //Flip the 2 cards back
-                    var card_1 = document.getElementById(cardsIds[0])
-                    var card_2 = document.getElementById(cardsIds[1])
-                    card_1.style.background = 'src(/assets/images/blaank.jpeg) no-repeat';
-                    card_1.innerHTML = "";
-                    card_2.style.background = 'src(/assets/images/blaank.jpeg) no-repeat';
-                    card_2.innerHTML = "";
-                    //clear arrays
-                    cards_values = []
-                    cardIds = [];
-
-                }
-                setTimeout(flip2Back, 600)
-            }
-        }
-    }
 })
