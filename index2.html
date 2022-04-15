@@ -15,40 +15,25 @@
 
 <body>
     <header>
-        <a href="index2.html">
-            <h1><i class="fa fa-solid fa-head-side-brain"></i>Memory Game ! </h1>
+        <a href="index.html">
+            <h1>Memory Game ! </h1>
         </a>
 
 
     </header>
 
 
-    <!--  Game Section containing the pictures -->
+    <!--  Game Pop up explaining how to play the game -->
     <section>
-        <h2>Timer</h2>
+        <div class='pop-up'>
+            <h2>Welcome to Brain Wiz Memory Game</h2>
+            <h3>Understanding the Game</h3>
 
-        <div class="controls-area">
-            <button class="btn btn--big btn--green">Reset Game</button>
-
-
+            <p>When a player turns over two cards that do not match, those cards are turned face down again (in the same position) and it becomes the next player' s turn. The trick is to remember which cards are where.</p>
+            <button id="play-btn"><a href="index.html">Play Now</a></button>
         </div>
 
-        <div class="wrapper-game-area">
-
-            <ul class="cards" id="cards-container">
-
-            </ul>
-
-
-
     </section>
-    <section>
-        <div class="score-area">
-            <div>Moves <span id="score">0</span>
-            </div>
-
-    </section>
-
     <script src=" assets/js/script.js">
     </script>
 </body>

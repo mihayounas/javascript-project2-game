@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 * {
 
@@ -86,4 +85,57 @@
     border-radius: 20px;
     border: 6px double black;
 
+}
+
+header a {
+    text-decoration: none;
+
+}
+
+header h1 {
+    font-family: 'Lobster', sans-serif;
+    font-size: 50px;
+}
+
+.pop-up {
+
+    width: 620px;
+    background: pink;
+    border-radius: 10px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-items: center;
+
+}
+
+.pop-up h2,
+h3,
+p {
+    font-family: 'Lobster', sans-serif;
+    font-size: xx-large;
+    color: rgb(147, 86, 238)
+}
+
+
+
+#play-btn {
+    height: 70px;
+    width: 150px;
+    background-color: rgb(224, 128, 144);
+    border-radius: 20%;
+
+}
+
+#play-btn a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Lobster', sans-serif;
+}
+
+#play-btn:hover {
+    background-color: aquamarine;
+    cursor: pointer;
 }
