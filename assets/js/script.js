@@ -108,6 +108,11 @@ function runGame() {
     }
 }
 runGame()
+let time = 0;
+setInterval(() => {
+    time++;
+    document.getElementById('time').innerHTML = time + 's'
+}, 1000)
 
 // Create the click event to make the cards flip on click
 
