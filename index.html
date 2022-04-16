@@ -14,39 +14,35 @@
 </head>
 
 <body>
+    <!--Header Containing title , moves count and a timer -->
     <header>
         <a href="index2.html">
             <h1>Memory Game ! </h1>
         </a>
 
-
     </header>
 
 
-    <!--  Game Section containing the pictures -->
+    <!--  Game Section  -->
     <section>
-        <div class="controls-area">
-            <button class="btn btn--big btn--green">Reset Game</button>
-
-
-        </div>
-
         <div class="wrapper-game-area">
-
-            <ul class="cards" id="cards-container">
-
-            </ul>
-
-
-
-    </section>
-    <section>
-        <div class="score-area">
-            <div>Moves <span id="score">0</span>
+            <div class="controls-area">
+                <a href="index.html"><button id="btn">Reset Game</button></a>
             </div>
+            <div class="score-area">
+                <strong>
+                    <div>Moves: <span id="score">0</span>
+                    </div>
+                </strong>
+                <strong>
+                    <div>Time: <span id="time">0</span>
+                    </div>
+                </strong>
 
+            </div>
+            <ul class="cards" id="cards-container"></ul>
     </section>
-
+    <!--Link to javascipt file-->
     <script src=" assets/js/script.js">
     </script>
 </body>

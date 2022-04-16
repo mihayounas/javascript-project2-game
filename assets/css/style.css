@@ -98,6 +98,40 @@ body {
     background-image: url(/assets/images/beckground.jpeg)
 }
 
+#btn {
+    font-size: x-large;
+    border-radius: 10px;
+    color: rgb(247, 133, 205);
+
+}
+
+.score-area {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.score-area div {
+    color: white;
+    font-size: x-large
+}
+
+.score-area span {
+    color: white;
+    font-size: x-large
+}
+
+
+#btn:hover {
+    background-color: rgb(247, 133, 205);
+    color: white;
+    cursor: pointer;
+}
+
+
 header h1 {
     font-family: 'Lobster', sans-serif;
     font-size: 50px;
@@ -139,9 +173,10 @@ p {
     text-decoration: none;
     font-size: 30px;
     font-family: 'Lobster', sans-serif;
+    color: white
 }
 
 #play-btn:hover {
-    background-color: aquamarine;
+    background-color: rgb(147, 86, 238);
     cursor: pointer;
 }
