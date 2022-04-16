@@ -1,10 +1,33 @@
 // Wait for Dom to load before running the game
-//Get buttons and add event listeners to them
+document.addEventListener("DOMContentLoaded", function() {
+    function refresh() {
+        window.location.reload("Refresh")
+    }
+    //Create pop up modal function
+
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+})
 
 
 
-
-// Create our html elements Crads with classes and ids
+// Create our html elements Cards with classes and ids
 
 function createCard(object) {
     let li = document.createElement('li');
@@ -39,7 +62,7 @@ function createCard(object) {
     document.getElementById('cards-container').appendChild(li);
 }
 
-// Create an array of cards with image sources
+// Create an array of cards with image sources and names 
 
 let cardArray = [{
         name: 'cat',
@@ -90,7 +113,8 @@ let cardArray = [{
         img: '/assets/images/img12.png'
     },
 ]
-//Declare variables
+//Declare variables which we will use to match the cards and count the moves
+
 let option1 = '';
 let option2 = '';
 let moves = []
@@ -99,13 +123,13 @@ let moves = []
 cardArray.sort(() => 0.5 - Math.random());
 
 // Create runGame function so we can create the game board cards
-
 function runGame() {
     for (i = 0; i < cardArray.length; i++) {
         createCard(cardArray[i])
     }
 }
 runGame()
+//Create time variable for keeping a timer for the player
 let time = 0;
 setInterval(() => {
     time++;
@@ -122,10 +146,12 @@ cardsArray.forEach((card) => {
 
         let selectedOption = event.target.getAttribute('data-name')
         moves++
+        document.getElementById('score').innerHTML = moves
         setTimeout(() => matchOption(selectedOption), 500)
     })
 
 })
+//Create matchOption function so we can match our cards in pairs
 
 function matchOption(selectedOption) {
     if (option1 === '') {
@@ -153,7 +179,12 @@ function matchOption(selectedOption) {
     }
 }
 
+
+//Create fliBack function so that our cards will flip back if they do not match
+
 function flipBack(option) {
-    document.querySelectorAll(`img[data-name=${option}]`).parentNode.parentNode.style.transform = 'rotateY(0deg)'
+    document.querySelectorAll(`img[data-name=${option}]`).forEach((card) => {
+        card.parentNode.parentNode.style.transform = 'rotateY(0deg)'
+    })
     console.log(option)
 }

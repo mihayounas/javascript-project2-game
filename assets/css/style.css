@@ -95,10 +95,11 @@ header a {
 }
 
 body {
-    background-image: url(/assets/images/beckground.jpeg)
+    background-image: url(/assets/images/beckground.jpeg);
+
 }
 
-#btn {
+#btn input {
     font-size: x-large;
     border-radius: 10px;
     color: rgb(247, 133, 205);
@@ -125,7 +126,7 @@ body {
 }
 
 
-#btn:hover {
+#btn input:hover {
     background-color: rgb(247, 133, 205);
     color: white;
     cursor: pointer;
@@ -178,5 +179,46 @@ p {
 
 #play-btn:hover {
     background-color: rgb(147, 86, 238);
+    cursor: pointer;
+}
+
+.close {
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 550px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    float: left;
+}
+
+#myModal {
+    position: fixed;
+    padding-top: 100px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    z-index: 9999;
+}
+
+#myBtn {
+    font-size: x-large;
+    border-radius: 10px;
+    color: white;
+    height: 40px;
+    width: 180px;
+    background-color: rgb(224, 128, 144);
+    border-radius: 20px;
+}
+
+#myBtn input:hover {
+    background-color: rgb(224, 128, 144);
     cursor: pointer;
 }

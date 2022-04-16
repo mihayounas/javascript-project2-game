@@ -20,14 +20,17 @@
             <h1>Memory Game ! </h1>
         </a>
 
+
     </header>
 
 
     <!--  Game Section  -->
     <section>
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn">Game Info</button>
         <div class="wrapper-game-area">
             <div class="controls-area">
-                <a href="index.html"><button id="btn">Reset Game</button></a>
+                <a href="index.html"><button id="btn"><input type="button" value="Refresh" onClick="refresh(this)"></button></a>
             </div>
             <div class="score-area">
                 <strong>
@@ -41,6 +44,24 @@
 
             </div>
             <ul class="cards" id="cards-container"></ul>
+    </section>
+    <section>
+
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="pop-up">
+                <span class="close">&times;</span>
+                <h2>Welcome to Brain Wiz Memory Game</h2>
+                <h3>Understanding the Game</h3>
+
+                <p>When a player turns over two cards that do not match, those cards are turned face down again (in the same position) and it becomes the next player' s turn. The trick is to remember which cards are where.</p>
+                <button id="play-btn"><a href="index.html">Play Now</a></button>
+            </div>
+
+        </div>
     </section>
     <!--Link to javascipt file-->
     <script src=" assets/js/script.js">
