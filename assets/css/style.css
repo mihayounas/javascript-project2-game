@@ -7,6 +7,8 @@
     text-align: center;
     padding: 0;
     box-sizing: border-box;
+    color: pink;
+
 }
 
 /* Display of the front and back side of the displayed cards */
@@ -20,7 +22,7 @@
     margin: 0 auto;
     flex-direction: column;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 6px;
     column-count: 3;
 }
 
@@ -39,7 +41,7 @@
 .flip-card {
     background-color: transparent;
     width: 170px;
-    height: 200px;
+    height: 180px;
     perspective: 1000px;
     list-style-type: none;
     border-radius: 20px;
@@ -61,7 +63,7 @@
     position: absolute;
     backface-visibility: hidden;
     width: 170px;
-    height: 200px;
+    height: 180px;
     border-radius: 20px;
 }
 
@@ -72,7 +74,7 @@
 .flip-card-front img {
     object-fit: cover;
     width: 170px;
-    height: 200px;
+    height: 180px;
     border-radius: 20px;
     border: 6px double black;
 
@@ -81,7 +83,7 @@
 .flip-card-back img {
     object-fit: cover;
     width: 170px;
-    height: 200px;
+    height: 180px;
     border-radius: 20px;
     border: 6px double black;
 
@@ -90,6 +92,10 @@
 header a {
     text-decoration: none;
 
+}
+
+body {
+    background-image: url(/assets/images/beckground.jpeg)
 }
 
 header h1 {
