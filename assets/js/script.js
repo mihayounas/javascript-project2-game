@@ -103,8 +103,6 @@ cardArray.sort(() => 0.5 - Math.random());
 function runGame() {
     for (i = 0; i < cardArray.length; i++) {
         createCard(cardArray[i])
-
-
     }
 }
 runGame()
@@ -121,24 +119,41 @@ const cardsArray = [...cardsCollection]
 cardsArray.forEach((card) => {
     card.addEventListener('click', (event) => {
         event.target.parentNode.parentNode.style.transform = 'rotateY(180deg)'
-        let selectedOptions = event.target.getAttribute('data-name')
+
+        let selectedOption = event.target.getAttribute('data-name')
         moves++
-        if (option1 === '') {
-            option1 = selectedOptions;
-        } else if (option1 !== '') {
-            option2 = selectedOptions;
-        }
-        if (option1 !== '' && option2 !== '') {
-            if (option1 === option2) {
-
-                alert('You Found a Match')
-            } else {
-
-                alert('Sorry Try Again!')
-                option1 = '';
-                option2 = '';
-
-            }
-        }
+        setTimeout(() => matchOption(selectedOption), 500)
     })
+
 })
+
+function matchOption(selectedOption) {
+    if (option1 === '') {
+        option1 = selectedOption;
+    } else if (option1 !== '') {
+        option2 = selectedOption;
+    }
+    if (option1 !== '' && option2 !== '') {
+        if (option1 === option2) {
+
+            alert('You Found a Match')
+            option1 = '';
+            option2 = '';
+
+        } else {
+            alert('Sorry Try Again!')
+
+            flipBack(option1);
+            flipBack(option2);
+
+            option1 = '';
+            option2 = '';
+
+        }
+    }
+}
+
+function flipBack(option) {
+    document.querySelectorAll(`img[data-name=${option}]`).parentNode.parentNode.style.transform = 'rotateY(0deg)'
+    console.log(option)
+}
