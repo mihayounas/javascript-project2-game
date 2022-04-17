@@ -96,14 +96,11 @@ header a {
 
 body {
     background-image: url(/assets/images/beckground.jpeg);
-
-}
-
-#btn input {
-    font-size: x-large;
-    border-radius: 10px;
-    color: rgb(247, 133, 205);
-
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .score-area {
@@ -126,11 +123,7 @@ body {
 }
 
 
-#btn input:hover {
-    background-color: rgb(247, 133, 205);
-    color: white;
-    cursor: pointer;
-}
+
 
 
 header h1 {
@@ -139,7 +132,6 @@ header h1 {
 }
 
 .pop-up {
-
     width: 620px;
     background: pink;
     border-radius: 10px;
@@ -213,12 +205,33 @@ p {
     border-radius: 10px;
     color: white;
     height: 40px;
-    width: 180px;
+    width: 170px;
     background-color: rgb(224, 128, 144);
     border-radius: 20px;
+    float: right;
+    margin-right: 500px;
 }
 
-#myBtn input:hover {
+#myBtn:hover {
+    background-color: rgb(247, 133, 205);
+    color: white;
+    cursor: pointer;
+}
+
+#btn input {
+    font-size: x-large;
+    border-radius: 10px;
+    color: white;
+    height: 40px;
+    width: 170px;
     background-color: rgb(224, 128, 144);
+    border-radius: 20px;
+    float: left;
+    margin-left: 500px;
+}
+
+#btn input:hover {
+    background-color: rgb(247, 133, 205);
+    color: white;
     cursor: pointer;
 }

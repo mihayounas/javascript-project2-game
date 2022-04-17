@@ -27,11 +27,12 @@
     <!--  Game Section  -->
     <section>
         <!-- Trigger/Open The Modal -->
-        <button id="myBtn">Game Info</button>
+        <div><button id="myBtn">Game Info</button></div>
+        <div class="controls-area">
+            <a href="index.html" id="btn"><input id="'refresh" type="button" value="Refresh" onClick="refresh(this)"></a>
+        </div>
         <div class="wrapper-game-area">
-            <div class="controls-area">
-                <a href="index.html"><button id="btn"><input type="button" value="Refresh" onClick="refresh(this)"></button></a>
-            </div>
+
             <div class="score-area">
                 <strong>
                     <div>Moves: <span id="score">0</span>
