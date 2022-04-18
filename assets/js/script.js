@@ -192,13 +192,17 @@ function flipBack(option) {
     document.querySelectorAll(`img[data-name=${option}]`).forEach((card) => {
         card.parentNode.parentNode.style.transform = 'rotateY(0deg)'
     })
-    console.log(option)
+
 }
 
 //Create functions to control levels of difficulty
 
-function easylevel() {
+function easylevel(option) {
+
     let easy = Math.floor(cardArray.length / 3);
+    document.querySelectorAll(`img[data-name=${option}]`).forEach((card) => {
+        card.parentNode.parentNode.style.transform = 'rotateY(180deg)'
+    })
     console.log(easy)
 }
 
