@@ -118,11 +118,7 @@ let cardArray = [{
         img: '/assets/images/img12.png'
     },
 ]
-//Declare variables which we will use to match the cards and count the moves
 
-let option1 = '';
-let option2 = '';
-let moves = []
 
 // Sort the array in that way that it will always be randon for the player
 cardArray.sort(() => 0.5 - Math.random());
@@ -146,6 +142,8 @@ setInterval(() => {
 
 const cardsCollection = document.getElementsByClassName('flip-card')
 const cardsArray = [...cardsCollection]
+
+
 cardsArray.forEach((card) => {
     card.addEventListener('click', (event) => {
         event.target.parentNode.parentNode.style.transform = 'rotateY(180deg)'
@@ -157,6 +155,11 @@ cardsArray.forEach((card) => {
     })
 
 })
+
+//Declare variables which we will use to match the cards and count the moves
+let option1 = '';
+let option2 = '';
+let moves = []
 //Create matchOption function so we can match our cards in pairs
 
 function matchOption(selectedOption) {
@@ -194,15 +197,14 @@ function flipBack(option) {
     })
 
 }
-
 //Create functions to control levels of difficulty
+var intervalInMilliseconds = 1000; // change this to watever value you like
+var activeInterval = undefined;
 
-function easylevel(option) {
-
+function easylevel(event) {
     let easy = Math.floor(cardArray.length / 3);
-    document.querySelectorAll(`img[data-name=${option}]`).forEach((card) => {
-        card.parentNode.parentNode.style.transform = 'rotateY(180deg)'
-    })
+    event.target.getAttribute('data-name')
+
     console.log(easy)
 }
 
