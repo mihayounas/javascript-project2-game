@@ -141,7 +141,7 @@ header h1 {
     flex-wrap: wrap;
     padding: 10px;
     align-items: center;
-
+    border: 6px double black;
 }
 
 .pop-up h2,
@@ -162,8 +162,8 @@ p {
     color: white;
     font-weight: bolder;
     font-size: large;
-    margin-right: 200px;
-    margin-top: 50px;
+
+
 }
 
 #play-btn2 {
@@ -172,10 +172,25 @@ p {
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
     color: white;
-    margin-left: 200px;
     font-weight: bolder;
     font-size: large;
-    margin-top: -50px;
+
+}
+
+#play-btn3 {
+    height: 50px;
+    width: 130px;
+    background-color: rgb(224, 128, 144);
+    border-radius: 20%;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+
+}
+
+#play-btn3:hover {
+    background-color: rgb(147, 86, 238);
+    cursor: pointer;
 }
 
 #play-btn1:hover {
@@ -187,6 +202,7 @@ p {
     background-color: rgb(147, 86, 238);
     cursor: pointer;
 }
+
 
 
 .close {
@@ -206,13 +222,14 @@ p {
 
 #myModal {
     position: fixed;
-    padding-top: 100px;
+    padding-top: 170px;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     overflow: auto;
     z-index: 9999;
+
 }
 
 #myBtn {

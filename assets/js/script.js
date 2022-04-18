@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.reload("Refresh")
     }
 
-    function easyLevel() {}
+
 
     function hardLevel() {}
     //Create pop up modal function
@@ -134,7 +134,8 @@ function runGame() {
     }
 }
 runGame()
-//Create time variable for keeping a timer for the player
+
+//Create time variable for keeping the time for the player
 let time = 0;
 setInterval(() => {
     time++;
@@ -193,3 +194,22 @@ function flipBack(option) {
     })
     console.log(option)
 }
+
+//Create functions to control levels of difficulty
+
+function easylevel() {
+    let easy = Math.floor(cardArray.length / 3);
+    console.log(easy)
+}
+
+function mediumlevel() {
+    let medium = Math.floor(cardArray.length / 2);
+    console.log(medium)
+}
+
+function hardlevel() {
+    let hard = Math.floor(cardArray.length);
+    console.log(hard)
+}
+
+window.onload = easylevel;
