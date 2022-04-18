@@ -154,25 +154,40 @@ p {
 
 
 
-#play-btn {
-    height: 70px;
-    width: 150px;
+#play-btn1 {
+    height: 50px;
+    width: 120px;
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
-
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+    margin-right: 200px;
+    margin-top: 50px;
 }
 
-#play-btn a {
-    text-decoration: none;
-    font-size: 30px;
-    font-family: 'Lobster', sans-serif;
-    color: white
+#play-btn2 {
+    height: 50px;
+    width: 120px;
+    background-color: rgb(224, 128, 144);
+    border-radius: 20%;
+    color: white;
+    margin-left: 200px;
+    font-weight: bolder;
+    font-size: large;
+    margin-top: -50px;
 }
 
-#play-btn:hover {
+#play-btn1:hover {
     background-color: rgb(147, 86, 238);
     cursor: pointer;
 }
+
+#play-btn2:hover {
+    background-color: rgb(147, 86, 238);
+    cursor: pointer;
+}
+
 
 .close {
     color: #aaa;

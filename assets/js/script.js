@@ -3,6 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function refresh() {
         window.location.reload("Refresh")
     }
+
+    function easyLevel() {}
+
+    function hardLevel() {}
     //Create pop up modal function
 
     var modal = document.getElementById("myModal");
@@ -147,7 +151,7 @@ cardsArray.forEach((card) => {
 
         let selectedOption = event.target.getAttribute('data-name')
         moves++
-        document.getElementById('score').innerHTML = moves
+        document.getElementById('score').innerHTML = Math.floor(moves / 2)
         setTimeout(() => matchOption(selectedOption), 500)
     })
 
