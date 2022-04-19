@@ -47,7 +47,7 @@ function createCard(object) {
     divFront.classList.add('flip-card-front');
 
     let imgFront = document.createElement('img');
-    imgFront.setAttribute('src', '/assets/images/front-side.png')
+    imgFront.setAttribute('src', 'assets/images/front-side.png')
     imgFront.setAttribute('data-name', object.name)
     divFront.appendChild(imgFront);
 
@@ -71,28 +71,27 @@ function createCard(object) {
 
 let cardArray = [{
         name: 'cat',
-        img: '/assets/images/img1.jpeg'
+        img: 'assets/images/img1.jpeg'
     },
-
     {
         name: 'koala',
-        img: '/assets/images/img3.jpeg'
+        img: 'assets/images/img3.jpeg'
     },
     {
         name: 'unicorn',
-        img: '/assets/images/img6.jpeg'
+        img: 'assets/images/img6.jpeg'
     },
     {
         name: 'cat2',
-        img: '/assets/images/img7.jpeg'
+        img: 'assets/images/img7.jpeg'
     },
     {
         name: 'elephant',
-        img: '/assets/images/img9.jpeg'
+        img: 'assets/images/img9.jpeg'
     },
     {
         name: 'kitty',
-        img: '/assets/images/img11.png'
+        img: 'assets/images/img11.png'
     },
 ]
 
@@ -116,6 +115,7 @@ function runGame(length) {
         createCard(doubledArray[i])
     }
     // Create the click event to make the cards flip on click
+
     cardsCollection = document.getElementsByClassName('flip-card')
     cardsArray = [...cardsCollection]
     cardsArray.forEach((card) => {
@@ -134,7 +134,7 @@ function runGame(length) {
 //Create time variable for keeping the time for the player
 function time() {
     let time = 0;
-    setInterval(() => {
+    let interval = setInterval(() => {
         time++;
         document.getElementById('time').innerHTML = time + 's'
     }, 1000)
@@ -187,17 +187,20 @@ function flipBack(option) {
 
 //Create functions to control levels of difficulty
 function easylevel() {
+
     runGame(4)
     modal.style.display = "none";
 
 }
 
 function mediumlevel() {
+
     runGame(8)
     modal.style.display = "none";
 }
 
 function hardlevel() {
+
     runGame(12)
     modal.style.display = "none";
 }
