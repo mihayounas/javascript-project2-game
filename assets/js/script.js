@@ -1,5 +1,7 @@
 // Wait for Dom to load before running the game
 var modal = document.getElementById("myModal");
+let time = 0;
+let interval;
 document.addEventListener("DOMContentLoaded", function() {
     function refresh() {
         window.location.reload("Refresh")
@@ -29,8 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 })
-
-
 
 // Create our html elements Cards with classes and ids
 
@@ -128,13 +128,15 @@ function runGame(length) {
         })
 
     })
-    time()
+    startTime()
 }
 
 //Create time variable for keeping the time for the player
-function time() {
-    let time = 0;
-    let interval = setInterval(() => {
+function startTime() {
+
+    clearTimeout(interval)
+    time = 0;
+    interval = setInterval(() => {
         time++;
         document.getElementById('time').innerHTML = time + 's'
     }, 1000)
