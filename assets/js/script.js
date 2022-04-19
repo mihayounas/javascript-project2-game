@@ -130,6 +130,7 @@ function runGame(length) {
             setTimeout(() => matchOption(selectedOption), 500)
         })
 
+
     })
     startTime()
 }
@@ -210,5 +211,3 @@ function hardlevel() {
     runGame(12)
     modal.style.display = "none";
 }
-
-function endGame() {}
