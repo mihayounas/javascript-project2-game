@@ -1,15 +1,13 @@
 // Wait for Dom to load before running the game
+var modal = document.getElementById("myModal");
 document.addEventListener("DOMContentLoaded", function() {
     function refresh() {
         window.location.reload("Refresh")
     }
 
-
-
-    function hardLevel() {}
     //Create pop up modal function
 
-    var modal = document.getElementById("myModal");
+
     var btn = document.getElementById("myBtn");
     var span = document.getElementsByClassName("close")[0];
     btn.onclick = function() {
@@ -19,7 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
+        runGame(4)
     }
+
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
@@ -73,21 +73,10 @@ let cardArray = [{
         name: 'cat',
         img: '/assets/images/img1.jpeg'
     },
-    {
-        name: 'cat',
-        img: '/assets/images/img2.jpeg'
-    },
+
     {
         name: 'koala',
         img: '/assets/images/img3.jpeg'
-    },
-    {
-        name: 'koala',
-        img: '/assets/images/img4.jpeg'
-    },
-    {
-        name: 'unicorn',
-        img: '/assets/images/img5.jpeg'
     },
     {
         name: 'unicorn',
@@ -98,24 +87,12 @@ let cardArray = [{
         img: '/assets/images/img7.jpeg'
     },
     {
-        name: 'cat2',
-        img: '/assets/images/img8.jpeg'
-    },
-    {
         name: 'elephant',
         img: '/assets/images/img9.jpeg'
     },
     {
-        name: 'elephant',
-        img: '/assets/images/img10.jpeg'
-    },
-    {
         name: 'kitty',
         img: '/assets/images/img11.png'
-    },
-    {
-        name: 'kitty',
-        img: '/assets/images/img12.png'
     },
 ]
 
@@ -124,38 +101,45 @@ let cardArray = [{
 cardArray.sort(() => 0.5 - Math.random());
 
 // Create runGame function so we can create the game board cards
-function runGame() {
-    for (i = 0; i < cardArray.length; i++) {
-        createCard(cardArray[i])
+
+function runGame(length) {
+    let number = length / 2
+    let newArray = cardArray.slice(0, number)
+    let doubledArray = newArray.concat(newArray).sort(() => Math.random() - 0.5);
+    let cardsCollection = document.getElementsByClassName('flip-card')
+    let cardsArray = [...cardsCollection]
+    cardsArray.forEach((card) => {
+        card.remove()
+
+    })
+    for (i = 0; i < doubledArray.length; i++) {
+        createCard(doubledArray[i])
     }
+    // Create the click event to make the cards flip on click
+    cardsCollection = document.getElementsByClassName('flip-card')
+    cardsArray = [...cardsCollection]
+    cardsArray.forEach((card) => {
+        card.addEventListener('click', (event) => {
+            event.target.parentNode.parentNode.style.transform = 'rotateY(180deg)'
+            let selectedOption = event.target.getAttribute('data-name')
+            moves++
+            document.getElementById('score').innerHTML = Math.floor(moves / 2)
+            setTimeout(() => matchOption(selectedOption), 500)
+        })
+
+    })
+    time()
 }
-runGame()
+
 
 //Create time variable for keeping the time for the player
-let time = 0;
-setInterval(() => {
-    time++;
-    document.getElementById('time').innerHTML = time + 's'
-}, 1000)
-
-// Create the click event to make the cards flip on click
-
-const cardsCollection = document.getElementsByClassName('flip-card')
-const cardsArray = [...cardsCollection]
-
-
-cardsArray.forEach((card) => {
-    card.addEventListener('click', (event) => {
-        event.target.parentNode.parentNode.style.transform = 'rotateY(180deg)'
-
-        let selectedOption = event.target.getAttribute('data-name')
-        moves++
-        document.getElementById('score').innerHTML = Math.floor(moves / 2)
-        setTimeout(() => matchOption(selectedOption), 500)
-    })
-
-})
-
+function time() {
+    let time = 0;
+    setInterval(() => {
+        time++;
+        document.getElementById('time').innerHTML = time + 's'
+    }, 1000)
+}
 //Declare variables which we will use to match the cards and count the moves
 let option1 = '';
 let option2 = '';
@@ -189,7 +173,7 @@ function matchOption(selectedOption) {
 }
 
 
-//Create fliBack function so that our cards will flip back if they do not match
+//Create flipBack function so that our cards will flip back if they do not match
 
 function flipBack(option) {
     document.querySelectorAll(`img[data-name=${option}]`).forEach((card) => {
@@ -197,25 +181,20 @@ function flipBack(option) {
     })
 
 }
+
 //Create functions to control levels of difficulty
-var intervalInMilliseconds = 1000; // change this to watever value you like
-var activeInterval = undefined;
+function easylevel() {
+    runGame(4)
+    modal.style.display = "none";
 
-function easylevel(event) {
-    let easy = Math.floor(cardArray.length / 3);
-    event.target.getAttribute('data-name')
-
-    console.log(easy)
 }
 
 function mediumlevel() {
-    let medium = Math.floor(cardArray.length / 2);
-    console.log(medium)
+    runGame(8)
+    modal.style.display = "none";
 }
 
 function hardlevel() {
-    let hard = Math.floor(cardArray.length);
-    console.log(hard)
+    runGame(12)
+    modal.style.display = "none";
 }
-
-window.onload = easylevel;
