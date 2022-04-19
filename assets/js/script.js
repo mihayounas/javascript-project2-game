@@ -120,6 +120,11 @@ function runGame(length) {
     cardsArray = [...cardsCollection]
     cardsArray.forEach((card) => {
         card.addEventListener('click', (event) => {
+            var audio = new Audio("Card-flip-sound-effect.mp3");
+
+            document.onclick = function() {
+                audio.play();
+            }
             event.target.parentNode.parentNode.style.transform = 'rotateY(180deg)'
             let selectedOption = event.target.getAttribute('data-name')
             moves++
