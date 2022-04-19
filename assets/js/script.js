@@ -196,6 +196,7 @@ function easylevel() {
     runGame(4)
     modal.style.display = "none";
 
+
 }
 
 function mediumlevel() {
@@ -209,3 +210,5 @@ function hardlevel() {
     runGame(12)
     modal.style.display = "none";
 }
+
+function endGame() {}
