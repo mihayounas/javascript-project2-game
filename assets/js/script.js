@@ -131,7 +131,6 @@ function runGame(length) {
     time()
 }
 
-
 //Create time variable for keeping the time for the player
 function time() {
     let time = 0;
@@ -139,11 +138,14 @@ function time() {
         time++;
         document.getElementById('time').innerHTML = time + 's'
     }, 1000)
+
 }
+
 //Declare variables which we will use to match the cards and count the moves
 let option1 = '';
 let option2 = '';
 let moves = []
+let cardsMatched = []
 //Create matchOption function so we can match our cards in pairs
 
 function matchOption(selectedOption) {
@@ -158,7 +160,8 @@ function matchOption(selectedOption) {
             alert('You Found a Match')
             option1 = '';
             option2 = '';
-
+            cardsMatched++
+            document.getElementById('matched-cards').innerHTML = cardsMatched
         } else {
             alert('Sorry Try Again!')
 

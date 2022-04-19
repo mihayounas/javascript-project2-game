@@ -40,6 +40,10 @@
                     </div>
                 </strong>
                 <strong>
+                    <div>Cards Matched: <span id="matched-cards">0</span>
+                    </div>
+                </strong>
+                <strong>
                     <div>Time: <span id="time">0s</span>
                     </div>
                 </strong>
@@ -55,14 +59,19 @@
 
             <!-- Modal content -->
             <div class="pop-up">
-                <span class="close">&times;</span>
-                <h2>Welcome to Brain Wiz Memory Game</h2>
-                <h3>Understanding the Game</h3>
+                <div>
 
-                <p>When a player turns over two cards that do not match, those cards are turned face down again (in the same position) and it becomes the next player' s turn. The trick is to remember which cards are where.</p>
-                <span id="levels-btn"><input id='play-btn1' type="button" onclick="easylevel()" value="Easy Level" />
-                    <input id='play-btn3' type="button" onclick="mediumlevel()" value="Medium Level" />
-                    <input id='play-btn2' type="button" onclick="hardlevel()" value="Hard Level" /></span>
+                    <h2>Please choose your level:</h2>
+                    <h2> <span id="levels-btn"><input id='play-btn1' type="button" onclick="easylevel()" value="Easy Level" />
+                            <input id='play-btn3' type="button" onclick="mediumlevel()" value="Medium Level" />
+                            <input id='play-btn2' type="button" onclick="hardlevel()" value="Hard Level" /></span></h2>
+                    <span class="close">&times;</span>
+                    <h2>Welcome to Brain Wiz Memory Game</h2>
+                    <h3>Understanding the Game</h3>
+
+                    <p>When a player turns over two cards that do not match, those cards are turned face down again (in the same position) and it becomes the next player' s turn. The trick is to remember which cards are where.</p>
+
+                </div>
             </div>
 
         </div>

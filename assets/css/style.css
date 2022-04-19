@@ -148,14 +148,14 @@ header h1 {
 h3,
 p {
     font-family: 'Lobster', sans-serif;
-    font-size: xx-large;
+    font-size: x-large;
     color: rgb(147, 86, 238)
 }
 
 
 
 #play-btn1 {
-    height: 50px;
+    height: 30px;
     width: 120px;
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
@@ -167,7 +167,7 @@ p {
 }
 
 #play-btn2 {
-    height: 50px;
+    height: 30px;
     width: 120px;
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
@@ -178,7 +178,7 @@ p {
 }
 
 #play-btn3 {
-    height: 50px;
+    height: 30px;
     width: 130px;
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
@@ -210,10 +210,12 @@ p {
     font-size: 30px;
     font-weight: bold;
     margin-left: 550px;
+    position: relative;
+    top: -135px;
+    right: -6px;
 }
 
-.close:hover,
-.close:focus {
+.close:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
