@@ -116,11 +116,11 @@ function runGame(length) {
         card.addEventListener('click', (event) => {
             var audio = new Audio("Card-flip-sound-effect.mp3");
             audio.play();
-
             event.target.parentNode.parentNode.style.transform = 'rotateY(180deg)'
             let selectedOption = event.target.getAttribute('data-name')
             moves++
-            document.getElementById('score').innerHTML = Math.floor(moves / 2)
+            document.getElementById('score').innerHTML = Math.floor(moves / 2);
+
             setTimeout(() => matchOption(selectedOption), 500)
         })
 
@@ -131,7 +131,6 @@ function runGame(length) {
 
 //Create time variable for keeping the time for the player
 function startTime() {
-
     clearTimeout(interval)
     time = 0;
     interval = setInterval(() => {
@@ -146,17 +145,19 @@ let option1 = '';
 let option2 = '';
 let moves = []
 let cardsMatched = []
+let allowClicks = true;
 //Create matchOption function so we can match our cards in pairs
 
 function matchOption(selectedOption) {
     if (option1 === '') {
         option1 = selectedOption;
+        allowClicks = false;
     } else if (option1 !== '') {
         option2 = selectedOption;
+
     }
     if (option1 !== '' && option2 !== '') {
         if (option1 === option2) {
-
             alert('You Found a Match')
             option1 = '';
             option2 = '';
@@ -187,10 +188,8 @@ function flipBack(option) {
 
 //Create functions to control levels of difficulty
 function easylevel() {
-
     runGame(4)
     modal.style.display = "none";
-
 
 }
 
