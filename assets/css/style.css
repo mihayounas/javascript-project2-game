@@ -239,11 +239,9 @@ p {
     border-radius: 10px;
     color: white;
     height: 40px;
-    width: 170px;
+    width: 200px;
     background-color: rgb(224, 128, 144);
     border-radius: 20px;
-    float: right;
-    margin-right: 500px;
 }
 
 #myBtn:hover {

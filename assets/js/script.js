@@ -3,13 +3,7 @@ var modal = document.getElementById("myModal");
 let time = 0;
 let interval;
 document.addEventListener("DOMContentLoaded", function() {
-    function refresh() {
-        window.location.reload("Refresh")
-    }
-
     //Create pop up modal function
-
-
     var btn = document.getElementById("myBtn");
     var span = document.getElementsByClassName("close")[0];
     btn.onclick = function() {

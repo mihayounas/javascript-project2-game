@@ -2,7 +2,7 @@
 
 Brain Wizzz memory game is a game that challenges people visual memory in order to match two cards to clear the board.
 
-Welcome to <a href="http://mihayounas.github.io/rexremovals/index.html" target="_blank" rel="noopener">Rex Removals</a>
+Welcome to <a href="https://mihayounas.github.io/javascript-project2-game/" target="_blank" rel="noopener">Brain Wizzz</a>
 
 
 # Site Structure
@@ -16,7 +16,7 @@ The fonts chosen were 'Josefin' and 'Lobster'.The fall back is sans-serif. The t
 
 * ### Colour Scheme
  The color scheme chosen is based on pink,purple and black .The colors are consistent throughout the website .
- ![Color-scheme]()
+ ![Color-scheme](/assets/images/colorpallette.png)
 
 # Features
 Brain Wizzz website is set up to be easy to use . It contains features that a user would be fimiliar with ,such as game levels Easy,Medium and Hard.Also user will be able to see the moves he made,how many cards he matched and how long did he take to play.
