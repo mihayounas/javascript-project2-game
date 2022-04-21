@@ -26,6 +26,7 @@
     column-count: 3;
 }
 
+/* Style for the cards we are going to flip in order to play the game */
 .cards {
     height: 100%;
     width: 100%;
@@ -33,9 +34,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 5px;
-
-
-
 }
 
 .flip-card {
@@ -89,9 +87,9 @@
 
 }
 
+/* Styling the body area */
 header a {
     text-decoration: none;
-
 }
 
 body {
@@ -103,13 +101,13 @@ body {
     background-size: cover;
 }
 
+/* Score area where we will count the moves and the cards matched */
 .score-area {
     height: 100%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 .score-area div {
@@ -122,15 +120,12 @@ body {
     font-size: x-large
 }
 
-
-
-
-
 header h1 {
     font-family: 'Lobster', sans-serif;
     font-size: 50px;
 }
 
+/* Modal Pop up styling */
 .pop-up {
     width: 620px;
     background: pink;
@@ -152,76 +147,6 @@ p {
     color: rgb(147, 86, 238)
 }
 
-
-
-#play-btn1 {
-    height: 30px;
-    width: 120px;
-    background-color: rgb(224, 128, 144);
-    border-radius: 20%;
-    color: white;
-    font-weight: bolder;
-    font-size: large;
-
-
-}
-
-#play-btn2 {
-    height: 30px;
-    width: 120px;
-    background-color: rgb(224, 128, 144);
-    border-radius: 20%;
-    color: white;
-    font-weight: bolder;
-    font-size: large;
-
-}
-
-#play-btn3 {
-    height: 30px;
-    width: 130px;
-    background-color: rgb(224, 128, 144);
-    border-radius: 20%;
-    color: white;
-    font-weight: bolder;
-    font-size: large;
-
-}
-
-#play-btn3:hover {
-    background-color: rgb(147, 86, 238);
-    cursor: pointer;
-}
-
-#play-btn1:hover {
-    background-color: rgb(147, 86, 238);
-    cursor: pointer;
-}
-
-#play-btn2:hover {
-    background-color: rgb(147, 86, 238);
-    cursor: pointer;
-}
-
-
-
-.close {
-    color: #aaa;
-    font-size: 30px;
-    font-weight: bold;
-    margin-left: 550px;
-    position: relative;
-    top: -135px;
-    right: -6px;
-}
-
-.close:hover {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-    float: left;
-}
-
 #myModal {
     position: fixed;
     padding-top: 170px;
@@ -234,6 +159,7 @@ p {
 
 }
 
+/* Modal area buttons */
 #myBtn {
     font-size: x-large;
     border-radius: 10px;
@@ -250,20 +176,87 @@ p {
     cursor: pointer;
 }
 
-#btn input {
-    font-size: x-large;
-    border-radius: 10px;
-    color: white;
-    height: 40px;
-    width: 170px;
+/* Easy Level button */
+#play-btn1 {
+    height: 30px;
+    width: 120px;
     background-color: rgb(224, 128, 144);
-    border-radius: 20px;
-    float: left;
-    margin-left: 500px;
+    border-radius: 20%;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+
+
 }
 
-#btn input:hover {
-    background-color: rgb(247, 133, 205);
+/* Hard Level button */
+#play-btn2 {
+    height: 30px;
+    width: 120px;
+    background-color: rgb(224, 128, 144);
+    border-radius: 20%;
     color: white;
+    font-weight: bolder;
+    font-size: large;
+
+}
+
+/* Medium Level button */
+#play-btn3 {
+    height: 30px;
+    width: 130px;
+    background-color: rgb(224, 128, 144);
+    border-radius: 20%;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+
+}
+
+/* Setup hover for each Level button */
+#play-btn3:hover {
+    background-color: rgb(147, 86, 238);
     cursor: pointer;
+}
+
+#play-btn1:hover {
+    background-color: rgb(147, 86, 238);
+    cursor: pointer;
+}
+
+#play-btn2:hover {
+    background-color: rgb(147, 86, 238);
+    cursor: pointer;
+}
+
+/* Closing X to close the page */
+.close {
+    color: #aaa;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 550px;
+    position: relative;
+    top: -135px;
+    right: -6px;
+}
+
+/* X button hover */
+.close:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    float: left;
+}
+
+#firework {
+    opacity: 0.5;
+    overflow: auto;
+    z-index: 9999;
+    background: pink;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -3px;
 }

@@ -214,7 +214,5 @@ function hardlevel() {
 }
 
 function stopGame(cards) {
-    if (cards === cardsMatched) {
-        alert('finsished ')
-    }
+
 }
