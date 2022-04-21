@@ -1,4 +1,4 @@
-# **_Rex Removals_**
+# **_Brain Wizzz_**
 
 Brain Wizzz memory game is a game that challenges people visual memory in order to match two cards to clear the board.
 

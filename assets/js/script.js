@@ -21,8 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+            runGame(4)
         }
     }
+
 
 })
 
@@ -114,18 +116,25 @@ function runGame(length) {
     cardsArray = [...cardsCollection]
     cardsArray.forEach((card) => {
         card.addEventListener('click', (event) => {
-            var audio = new Audio("Card-flip-sound-effect.mp3");
-            audio.play();
-            event.target.parentNode.parentNode.style.transform = 'rotateY(180deg)'
-            let selectedOption = event.target.getAttribute('data-name')
-            moves++
-            document.getElementById('score').innerHTML = Math.floor(moves / 2);
+            let cardElement = event.target.parentNode.parentNode
 
-            setTimeout(() => matchOption(selectedOption), 500)
+            if (cardElement.style.transform !== 'rotateY(180deg)' && cardElement.classList.contains('flip-card-inner')) {
+                var audio = new Audio("Card-flip-sound-effect.mp3");
+                audio.play();
+
+                cardElement.style.transform = 'rotateY(180deg)'
+                let selectedOption = event.target.getAttribute('data-name')
+                moves++
+                document.getElementById('score').innerHTML = Math.floor(moves / 2);
+
+                setTimeout(() => matchOption(selectedOption), 500)
+
+            }
         })
 
 
-    })
+
+    });
     startTime()
 }
 
@@ -145,13 +154,13 @@ let option1 = '';
 let option2 = '';
 let moves = []
 let cardsMatched = []
-let allowClicks = true;
+
 //Create matchOption function so we can match our cards in pairs
 
 function matchOption(selectedOption) {
     if (option1 === '') {
         option1 = selectedOption;
-        allowClicks = false;
+
     } else if (option1 !== '') {
         option2 = selectedOption;
 
@@ -190,17 +199,22 @@ function flipBack(option) {
 function easylevel() {
     runGame(4)
     modal.style.display = "none";
-
 }
 
-function mediumlevel() {
 
+
+function mediumlevel() {
     runGame(8)
     modal.style.display = "none";
 }
 
 function hardlevel() {
-
     runGame(12)
     modal.style.display = "none";
+}
+
+function stopGame(cards) {
+    if (cards === cardsMatched) {
+        alert('finsished ')
+    }
 }
