@@ -8,11 +8,13 @@ document.addEventListener("DOMContentLoaded", function() {
     var span = document.getElementsByClassName("close")[0];
     btn.onclick = function() {
         modal.style.display = "block";
+
     }
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
         modal.style.display = "none";
+
         runGame(4)
     }
 
@@ -21,7 +23,9 @@ document.addEventListener("DOMContentLoaded", function() {
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
+
             runGame(4)
+
         }
     }
 
@@ -196,23 +200,28 @@ function flipBack(option) {
 }
 
 //Create functions to control levels of difficulty
+//Easy Level
 function easylevel() {
     runGame(4)
     modal.style.display = "none";
+    if (runGame(4) === stopGame(4)) {
+        fireworks.style.display = "block"
+    }
 }
-
-
-
+//Medium Level
 function mediumlevel() {
     runGame(8)
     modal.style.display = "none";
 }
-
+//Hard Level
 function hardlevel() {
     runGame(12)
     modal.style.display = "none";
 }
-
+//Game finished refresh everything and start again
 function stopGame(cards) {
+    for (matchOption of selectedOption)
+        time = 0
+    moves = ''
 
 }

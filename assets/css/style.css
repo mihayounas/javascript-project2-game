@@ -259,4 +259,5 @@ p {
     margin-right: auto;
     position: relative;
     top: -3px;
+    visibility: hidden;
 }
