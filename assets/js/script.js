@@ -225,5 +225,7 @@ function hardlevel() {
 function stopGame() {
     document.getElementById('firework').style.display = 'block'
     clearTimeout(interval)
-
+    document.getElementById('result1').innerHTML = 'Moves:' + ' ' + moves / 2;
+    document.getElementById('result2').innerHTML = 'Time:' + ' ' + time + ' ' + 'seconds ';
+    document.getElementById('result3').innerHTML = 'Cards Matched:' + ' ' + cardsMatched;
 }

@@ -251,7 +251,7 @@ p {
 /* Fireworks section */
 #firework {
     background-image: url('https://i0.wp.com/www.bestworldevents.com/wp-content/uploads/2017/12/Happy-New-Year-2018-Fireworks.gif?fit=800%2C534&ssl=1');
-    opacity: 0.3;
+    opacity: 0.5;
     overflow: auto;
     z-index: 9999;
     border-radius: 10px;
@@ -269,8 +269,11 @@ p {
 #firework p {
     font-size: xx-large;
     margin-top: 400px;
+    opacity: 1;
+    color: white;
 }
 
+/*Congratulation area Play Again button styled*/
 #congratsBtn {
     font-size: xx-large;
     border-radius: 10px;
@@ -279,9 +282,27 @@ p {
     background-color: rgb(224, 128, 144);
     border-radius: 20px;
     text-decoration: none;
+    color: white;
+    opacity: 1;
 }
 
 #congratsBtn:hover {
-    background-color: white;
+    background-color: purple;
     cursor: pointer;
+}
+
+/*Results Area*/
+#result1 {
+    color: white;
+    font-size: x-large;
+}
+
+#result2 {
+    color: white;
+    font-size: x-large;
+}
+
+#result3 {
+    color: white;
+    font-size: x-large;
 }
