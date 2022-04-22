@@ -87,6 +87,22 @@ let cardArray = [{
         name: 'kitty',
         img: 'assets/images/img11.png'
     },
+    {
+        name: 'chick',
+        img: 'assets/images/img12.jpeg'
+    },
+    {
+        name: 'pikka',
+        img: 'assets/images/img4.png'
+    },
+    {
+        name: 'coffee',
+        img: 'assets/images/img8.jpeg'
+    },
+    {
+        name: 'duggee',
+        img: 'assets/images/dugee.jpeg'
+    },
 ]
 
 
@@ -202,19 +218,19 @@ function flipBack(option) {
 //Create functions to control levels of difficulty
 //Easy Level
 function easylevel() {
-    runGame(4)
+    runGame(8)
     modal.style.display = "none";
     congrats.style.display = "none"
 }
 //Medium Level
 function mediumlevel() {
-    runGame(8)
+    runGame(12)
     modal.style.display = "none";
     congrats.style.display = "none"
 }
 //Hard Level
 function hardlevel() {
-    runGame(12)
+    runGame(16)
     modal.style.display = "none";
     congrats.style.display = "none"
 }

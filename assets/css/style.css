@@ -15,31 +15,27 @@
 /* Game area wrapper styling */
 
 .wrapper-game-area {
-    width: 720px;
+    width: 520px;
     background: pink;
     border-radius: 10px;
     display: flex;
     margin: 0 auto;
-    flex-direction: column;
     flex-wrap: wrap;
-    padding: 6px;
-    column-count: 3;
 }
 
 /* Style for the cards we are going to flip in order to play the game */
+
 .cards {
     height: 100%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 5px;
 }
 
 .flip-card {
     background-color: transparent;
-    width: 170px;
-    height: 180px;
+    width: 130px;
+    height: 160px;
     perspective: 1000px;
     list-style-type: none;
     border-radius: 20px;
@@ -60,8 +56,8 @@
 .flip-card-back {
     position: absolute;
     backface-visibility: hidden;
-    width: 170px;
-    height: 180px;
+    width: 130px;
+    height: 160px;
     border-radius: 20px;
 }
 
@@ -71,8 +67,8 @@
 
 .flip-card-front img {
     object-fit: cover;
-    width: 170px;
-    height: 180px;
+    width: 130px;
+    height: 160px;
     border-radius: 20px;
     border: 6px double black;
 
@@ -80,8 +76,8 @@
 
 .flip-card-back img {
     object-fit: cover;
-    width: 170px;
-    height: 180px;
+    width: 130px;
+    height: 160px;
     border-radius: 20px;
     border: 6px double black;
 
