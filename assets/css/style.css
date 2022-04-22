@@ -127,7 +127,7 @@ header h1 {
 
 /* Modal Pop up styling */
 .pop-up {
-    width: 620px;
+    width: 720px;
     background: pink;
     border-radius: 10px;
     display: flex;
@@ -234,7 +234,7 @@ p {
     color: #aaa;
     font-size: 30px;
     font-weight: bold;
-    margin-left: 550px;
+    margin-left: 600px;
     position: relative;
     top: -135px;
     right: -6px;
@@ -245,7 +245,6 @@ p {
     color: black;
     text-decoration: none;
     cursor: pointer;
-    float: left;
 }
 
 /* Fireworks section */
