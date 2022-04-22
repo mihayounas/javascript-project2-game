@@ -17,8 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         runGame(4)
     }
-
-
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
@@ -130,8 +128,15 @@ function runGame(length) {
                 let selectedOption = event.target.getAttribute('data-name')
                 moves++
                 document.getElementById('score').innerHTML = Math.floor(moves / 2);
+                setTimeout(() => {
+                    matchOption(selectedOption)
+                    if (cardsArray.length === cardsMatched * 2) {
+                        stopGame()
+                    }
 
-                setTimeout(() => matchOption(selectedOption), 500)
+                }, 500)
+
+
 
             }
         })
@@ -156,8 +161,8 @@ function startTime() {
 //Declare variables which we will use to match the cards and count the moves
 let option1 = '';
 let option2 = '';
-let moves = []
-let cardsMatched = []
+let moves = 0
+let cardsMatched = 0
 
 //Create matchOption function so we can match our cards in pairs
 
@@ -204,9 +209,6 @@ function flipBack(option) {
 function easylevel() {
     runGame(4)
     modal.style.display = "none";
-    if (runGame(4) === stopGame(4)) {
-        fireworks.style.display = "block"
-    }
 }
 //Medium Level
 function mediumlevel() {
@@ -219,9 +221,7 @@ function hardlevel() {
     modal.style.display = "none";
 }
 //Game finished refresh everything and start again
-function stopGame(cards) {
-    for (matchOption of selectedOption)
-        time = 0
-    moves = ''
-
+function stopGame() {
+    document.getElementById('firework').style.display = 'block'
+    clearTimeout(interval)
 }
