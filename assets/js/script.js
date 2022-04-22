@@ -221,7 +221,9 @@ function hardlevel() {
     modal.style.display = "none";
 }
 //Game finished refresh everything and start again
+
 function stopGame() {
     document.getElementById('firework').style.display = 'block'
     clearTimeout(interval)
+
 }
