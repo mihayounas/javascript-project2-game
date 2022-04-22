@@ -247,10 +247,9 @@ p {
     cursor: pointer;
 }
 
-/* Fireworks section */
-#firework {
-    background-image: url('https://i0.wp.com/www.bestworldevents.com/wp-content/uploads/2017/12/Happy-New-Year-2018-Fireworks.gif?fit=800%2C534&ssl=1');
-    opacity: 0.5;
+/* Congratulations section */
+#congrats {
+    background-image: url('/assets/images/beckground.jpeg');
     overflow: auto;
     z-index: 9999;
     border-radius: 10px;
@@ -260,16 +259,13 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-    height: 600px;
-    width: 800px;
-
+    width: 620px;
+    height: 620px;
 }
 
-#firework p {
+#congrats p {
     font-size: xx-large;
     margin-top: 400px;
-    opacity: 1;
-    color: white;
 }
 
 /*Congratulation area Play Again button styled*/
@@ -283,6 +279,19 @@ p {
     text-decoration: none;
     color: white;
     opacity: 1;
+}
+
+#congrats h1 {
+    color: white;
+    font-family: 'Lobster', sans-serif;
+    font-size: xxx-large;
+}
+
+#congrats h2 {
+    color: white;
+    font-family: 'Lobster', sans-serif;
+    font-size: x-large;
+    text-align: center;
 }
 
 #congratsBtn:hover {
@@ -304,4 +313,57 @@ p {
 #result3 {
     color: white;
     font-size: x-large;
+}
+
+/*Congrats pop up modal buttons to connect to the levels*/
+#congrats-btn1 {
+    height: 30px;
+    width: 120px;
+    background-color: rgb(224, 128, 144);
+    border-radius: 20%;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+
+
+}
+
+/* Hard Level button */
+#congrats-btn2 {
+    height: 30px;
+    width: 120px;
+    background-color: rgb(224, 128, 144);
+    border-radius: 20%;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+
+}
+
+/* Medium Level button */
+#congrats-btn3 {
+    height: 30px;
+    width: 130px;
+    background-color: rgb(224, 128, 144);
+    border-radius: 20%;
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+
+}
+
+/* Setup hover for each Level button */
+#congrats-btn3:hover {
+    background-color: rgb(147, 86, 238);
+    cursor: pointer;
+}
+
+#congrats-btn1:hover {
+    background-color: rgb(147, 86, 238);
+    cursor: pointer;
+}
+
+#congrats-btn2:hover {
+    background-color: rgb(147, 86, 238);
+    cursor: pointer;
 }

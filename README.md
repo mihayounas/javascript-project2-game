@@ -133,6 +133,7 @@ The method from cloning a project from GitHub is below:
 # Credits
 
 ### Content
+*The fireworks template came from https://slicker.me/javascript/fireworks.htm
 * The font came from [Google Fonts](https://fonts.google.com/).
 * The colour scheme was made by [Colormind](http://colormind.io/).
 * The icons came from [Font Awesome](https://fontawesome.com/).

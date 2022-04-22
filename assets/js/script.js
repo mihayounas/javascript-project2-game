@@ -13,16 +13,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
-        modal.style.display = "none";
-
-        runGame(4)
+        alert('Please chose a level')
     }
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
-            modal.style.display = "none";
-
-            runGame(4)
+            modal.style.display = "block";
 
         }
     }
@@ -109,6 +105,7 @@ function runGame(length) {
         card.remove()
 
     })
+    //Make the array of cards doubled in order to have a pair for each
     for (i = 0; i < doubledArray.length; i++) {
         createCard(doubledArray[i])
     }
@@ -121,14 +118,16 @@ function runGame(length) {
             let cardElement = event.target.parentNode.parentNode
 
             if (cardElement.style.transform !== 'rotateY(180deg)' && cardElement.classList.contains('flip-card-inner')) {
+                //Add audio file on click
                 var audio = new Audio("Card-flip-sound-effect.mp3");
                 audio.play();
-
+                //Rotate the cards when clicked
                 cardElement.style.transform = 'rotateY(180deg)'
                 let selectedOption = event.target.getAttribute('data-name')
                 moves++
                 document.getElementById('score').innerHTML = Math.floor(moves / 2);
                 setTimeout(() => {
+                    //If the cards are matched and there is none left the game will be finished
                     matchOption(selectedOption)
                     if (cardsArray.length === cardsMatched * 2) {
                         stopGame()
@@ -176,17 +175,13 @@ function matchOption(selectedOption) {
     }
     if (option1 !== '' && option2 !== '') {
         if (option1 === option2) {
-            alert('You Found a Match')
             option1 = '';
             option2 = '';
             cardsMatched++
             document.getElementById('matched-cards').innerHTML = cardsMatched
         } else {
-            alert('Sorry Try Again!')
-
             flipBack(option1);
             flipBack(option2);
-
             option1 = '';
             option2 = '';
 
@@ -209,23 +204,106 @@ function flipBack(option) {
 function easylevel() {
     runGame(4)
     modal.style.display = "none";
+    congrats.style.display = "none"
 }
 //Medium Level
 function mediumlevel() {
     runGame(8)
     modal.style.display = "none";
+    congrats.style.display = "none"
 }
 //Hard Level
 function hardlevel() {
     runGame(12)
     modal.style.display = "none";
+    congrats.style.display = "none"
 }
 //Game finished refresh everything and start again
 
 function stopGame() {
-    document.getElementById('firework').style.display = 'block'
+    document.getElementById('congrats').style.display = 'block'
+
     clearTimeout(interval)
-    document.getElementById('result1').innerHTML = 'Moves:' + ' ' + moves / 2;
-    document.getElementById('result2').innerHTML = 'Time:' + ' ' + time + ' ' + 'seconds ';
-    document.getElementById('result3').innerHTML = 'Cards Matched:' + ' ' + cardsMatched;
+
+    document.getElementById('result1').innerHTML = 'You have made :' + ' ' + moves / 2 + ' ' + 'moves';
+    document.getElementById('result2').innerHTML = 'In' + ' ' + time + ' ' + 'seconds ';
+    document.getElementById('result3').innerHTML = 'And Matched' + ' ' + cardsMatched + ' ' + 'cards';
+
+    moves = '';
+    cardsMatched = '';
+
+
+}
+
+//Fireworks 
+const max_fireworks = 5,
+    max_sparks = 50;
+let canvas = document.getElementById('myCanvas');
+let context = canvas.getContext('2d');
+let fireworks = [];
+
+for (let i = 0; i < max_fireworks; i++) {
+    let firework = {
+        sparks: []
+    };
+    for (let n = 0; n < max_sparks; n++) {
+        let spark = {
+            vx: Math.random() * 5 + .5,
+            vy: Math.random() * 5 + .5,
+            weight: Math.random() * .3 + .03,
+            red: Math.floor(Math.random() * 2),
+            green: Math.floor(Math.random() * 2),
+            blue: Math.floor(Math.random() * 2)
+        };
+        if (Math.random() > .5) spark.vx = -spark.vx;
+        if (Math.random() > .5) spark.vy = -spark.vy;
+        firework.sparks.push(spark);
+    }
+    fireworks.push(firework);
+    resetFirework(firework);
+}
+window.requestAnimationFrame(explode);
+
+function resetFirework(firework) {
+    firework.x = Math.floor(Math.random() * canvas.width);
+    firework.y = canvas.height;
+    firework.age = 0;
+    firework.phase = 'fly';
+}
+
+function explode() {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    fireworks.forEach((firework, index) => {
+        if (firework.phase == 'explode') {
+            firework.sparks.forEach((spark) => {
+                for (let i = 0; i < 10; i++) {
+                    let trailAge = firework.age + i;
+                    let x = firework.x + spark.vx * trailAge;
+                    let y = firework.y + spark.vy * trailAge + spark.weight * trailAge * spark.weight * trailAge;
+                    let fade = i * 20 - firework.age * 2;
+                    let r = Math.floor(spark.red * fade);
+                    let g = Math.floor(spark.green * fade);
+                    let b = Math.floor(spark.blue * fade);
+                    context.beginPath();
+                    context.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ',1)';
+                    context.rect(x, y, 4, 4);
+                    context.fill();
+                }
+            });
+            firework.age++;
+            if (firework.age > 100 && Math.random() < .05) {
+                resetFirework(firework);
+            }
+        } else {
+            firework.y = firework.y - 10;
+            for (let spark = 0; spark < 15; spark++) {
+                context.beginPath();
+                context.fillStyle = 'rgba(' + index * 50 + ',' + spark * 17 + ',0,1)';
+                context.rect(firework.x + Math.random() * spark - spark / 2, firework.y + spark * 4, 4, 4);
+                context.fill();
+            }
+            if (Math.random() < .001 || firework.y < 200) firework.phase = 'explode';
+        }
+    });
+    window.requestAnimationFrame(explode);
 }
