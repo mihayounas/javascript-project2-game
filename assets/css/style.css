@@ -5,22 +5,36 @@
 
     font-family: "Josefin", sans-serif;
     text-align: center;
-    padding: 0;
     box-sizing: border-box;
     color: pink;
 
 }
 
+
+
 /* Display of the front and back side of the displayed cards */
 /* Game area wrapper styling */
 
 .wrapper-game-area {
-    width: 520px;
     background: pink;
     border-radius: 10px;
     display: flex;
-    margin: 0 auto;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 640px;
+    margin: 0 auto;
+
+
+}
+
+.wrapper-game-area ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
 }
 
 /* Style for the cards we are going to flip in order to play the game */
@@ -43,8 +57,6 @@
 
 .flip-card-inner {
     position: relative;
-    width: 100%;
-    height: 100%;
     transition: transform 0.5s;
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -91,9 +103,6 @@ header a {
 body {
     background-image: url('../images/beckground.jpeg');
     background-repeat: no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -225,24 +234,6 @@ p {
     cursor: pointer;
 }
 
-/* Closing X to close the page */
-.close {
-    color: #aaa;
-    font-size: 30px;
-    font-weight: bold;
-    margin-left: 600px;
-    position: relative;
-    top: -135px;
-    right: -6px;
-}
-
-/* X button hover */
-.close:hover {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
 /* Congratulations section */
 #congrats {
     background-image: url('/assets/images/beckground.jpeg');
@@ -256,7 +247,8 @@ p {
     transform: translate(-50%, -50%);
     display: none;
     width: 620px;
-    height: 620px;
+    height: 500px;
+    border: 6px double black;
 }
 
 #congrats p {
@@ -362,4 +354,21 @@ p {
 #congrats-btn2:hover {
     background-color: rgb(147, 86, 238);
     cursor: pointer;
+}
+
+/* media queries*/
+
+/* For larger to medium screens size from 1200px wide and down */
+@media screen and (max-width: 1200px) {
+    .pop-up {
+        width: 600px;
+        font-size: x-large;
+    }
+
+    .wrapper-game-area {
+
+        font-size: large;
+
+    }
+
 }
