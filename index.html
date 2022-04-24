@@ -17,15 +17,15 @@
 
     <!--Header Containing title , moves count and a timer -->
     <header>
-        <a href="index.html">
-            <h1>Brain Wizzz</h1>
-            <h2>Memory Game ! </h2>
-            <!-- Trigger/Open The Modal -->
 
-            <div class="controls-area">
-                <button id="myBtn">Refresh and Info</button>
-            </div>
-        </a>
+        <h1>Brain Wizzz</h1>
+        <h2>Memory Game ! </h2>
+        <!-- Trigger/Open The Modal -->
+
+        <div class="controls-area">
+            <button id="myBtn">Refresh and Info</button>
+        </div>
+
 
 
     </header>
@@ -33,7 +33,7 @@
 
     <!--  Game Section  -->
     <section>
-
+        <h5>Good Luck</h5>
         <div class="wrapper-game-area">
 
             <div class="score-area">
@@ -51,6 +51,7 @@
 
             </div>
             <ul class="cards" id="cards-container"></ul>
+        </div>
     </section>
     <section>
 
@@ -63,10 +64,10 @@
                 <div>
 
                     <h2>Please choose your level:</h2>
-                    <h2> <span id="levels-btn">
-                            <input id='play-btn1' type="button" onclick="easylevel()" value="Easy Level" />
-                            <input id='play-btn3' type="button" onclick="mediumlevel()" value="Medium Level" />
-                            <input id='play-btn2' type="button" onclick="hardlevel()" value="Hard Level" /></span></h2>
+                    <span id="levels-btn">
+                        <input id='play-btn1' type="button" onclick="easylevel()" value="Easy Level" />
+                        <input id='play-btn3' type="button" onclick="mediumlevel()" value="Medium Level" />
+                        <input id='play-btn2' type="button" onclick="hardlevel()" value="Hard Level" /></span>
 
                     <h2>Welcome to Brain Wiz Memory Game</h2>
                     <h3>Understanding the Game</h3>
@@ -82,15 +83,15 @@
 
     <section id="congrats">
 
-        <h1>Congratulations!</h1>
+        <h2>Congratulations!</h2>
         <div id="result1"> Moves:</div>
         <div id="result2">Time:</div>
         <div id="result3">Cards Matched:</div>
         <h2>Challenge Yourself by chosing a more difficult level:</h2>
-        <h2> <span id="congrats-btn">
-                <input id='congrats-btn1' type="button" onclick="easylevel()" value="Easy Level" />
-                <input id='congrats-btn3' type="button" onclick="mediumlevel()" value="Medium Level" />
-                <input id='congrats-btn2' type="button" onclick="hardlevel()" value="Hard Level" /></span></h2>
+        <span id="congrats-btn">
+            <input id='congrats-btn1' type="button" onclick="easylevel()" value="Easy Level" />
+            <input id='congrats-btn3' type="button" onclick="mediumlevel()" value="Medium Level" />
+            <input id='congrats-btn2' type="button" onclick="hardlevel()" value="Hard Level" /></span>
 
 
     </section>
