@@ -102,9 +102,10 @@ header a {
 }
 
 body {
-    background-image: url('../images/beckground.jpeg');
+    background-image: url('../images/back.png');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 1000px;
 
 }
 
@@ -238,7 +239,7 @@ p {
 
 /* Congratulations section */
 #congrats {
-    background-image: url('/assets/images/beckground.jpeg');
+    background-image: url('/assets/images/back.png');
     overflow: auto;
     z-index: 9999;
     border-radius: 10px;
