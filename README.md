@@ -20,20 +20,27 @@ The fonts chosen were 'Josefin' and 'Lobster'.The fall back is sans-serif. The t
 
 # Features
 Brain Wizzz website is set up to be easy to use . It contains features that a user would be fimiliar with ,such as game levels Easy,Medium and Hard.Also user will be able to see the moves he made,how many cards he matched and how long did he take to play.
+![Landing-Page](/assets/images/landing.png)
+
 ## Existing Features
 
 * ## Heading and Title
 * Includes the name of the game .
+![Title](/assets/images/title.png)
   
 
 * ### Game Area 
 * Section dedicated to the game area board where all the cards are loaded for the purpose of playing and matching the cards.
-Depending on the level chosen it can be 4 , 6 or 12.
+Depending on the level chosen it can be 8 , 12 or 16.
 * It includes a Refresh button with the purpose of reloading the page but also loading the game info modal.
+![Game-Area](/assets/images/game.png)
 
 * ### The Pop up Modal
-* Section controled with JavaScript that will pop up on loading the page for the user to understand the game and select hi desired level of difficulty. 
-
+* Section controled with JavaScript that will pop up on loading the page for the user to understand the game and select the desired level of difficulty. 
+![Modal1](/assets/images/popup1.png)
+* ### The Congratulations Modal
+* Section controled with JavaScript that will pop up on finishing the level and showing the results , for example the cards that have been matched ,time and how many moves.
+![Congrats]
 
 # Technologies Used
 * [HTML5](https://www.w3schools.com/html/) - provides the content and structure for the website.
@@ -47,11 +54,11 @@ Brain Wizzz website has been properly tested ,all the code has been run through 
   ### HTML validator results are :
 
 * Landing Page
-![W3C Validator test result]()
+![W3C Validator test result](/assets/images/htmlvalidator.png)
 
 ### CSS validator results are below:
 
-![CSS Validator test result]()
+![CSS Validator test result](/assets/images/css.png)
 
 ## Responsiveness Test
 
