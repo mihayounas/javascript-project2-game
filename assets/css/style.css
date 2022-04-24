@@ -393,6 +393,46 @@ p {
 
     }
 
+    .score-area div {
+        color: white;
+        font-size: large;
+    }
+
+    .score-area span {
+        color: white;
+        font-size: large;
+    }
+
+    #myBtn {
+        font-size: large;
+        height: 30px;
+        width: 150px;
+
+    }
+
+    .pop-up h2,
+    h3,
+    p {
+        font-size: large;
+    }
+
+    #play-btn1 {
+        height: 30px;
+        width: 100px;
+        font-size: small;
+    }
+
+    #play-btn2 {
+        height: 30px;
+        width: 100px;
+        font-size: small;
+    }
+
+    #play-btn3 {
+        height: 30px;
+        width: 100px;
+        font-size: small;
+    }
 }
 
 /* For small screens sizes 450px and down*/
@@ -400,10 +440,12 @@ p {
 @media screen and (max-width: 450px) {
     .pop-up {
         width: 300px;
+        font-size: smaller;
     }
 
     #myModal {
         font-size: xx-small;
+        font-size: smaller;
     }
 
     .flip-card-front,
@@ -426,5 +468,48 @@ p {
     .wrapper-game-area {
         width: 300px;
 
+
+    }
+
+    .score-area div {
+        color: white;
+        font-size: small;
+    }
+
+    .score-area span {
+        color: white;
+        font-size: small;
+    }
+
+    #myBtn {
+        font-size: large;
+        height: 30px;
+        width: 150px;
+
+
+    }
+
+    .pop-up h2,
+    h3,
+    p {
+        font-size: small;
+    }
+
+    #play-btn1 {
+        height: 25px;
+        width: 90px;
+        font-size: small;
+    }
+
+    #play-btn2 {
+        height: 25px;
+        width: 90px;
+        font-size: small;
+    }
+
+    #play-btn3 {
+        height: 25px;
+        width: 98px;
+        font-size: small;
     }
 }
