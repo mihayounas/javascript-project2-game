@@ -1,11 +1,7 @@
-// Wait for Dom to load before running the game
-var modal = document.getElementById("myModal");
-let time = 0;
-let interval;
+//** Wait for Dom to load before running the game*/
 document.addEventListener("DOMContentLoaded", function() {
     //Create pop up modal function
     var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close")[0];
     btn.onclick = function() {
         modal.style.display = "block";
 
@@ -20,8 +16,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 })
+var modal = document.getElementById("myModal");
+let time = 0;
+let interval;
 
-// Create our html elements Cards with classes and ids
+//**  Create our html elements Cards with classes and ids*/
 
 function createCard(object) {
     let li = document.createElement('li');
@@ -99,16 +98,12 @@ let cardArray = [{
         img: 'assets/images/dugee.jpeg'
     },
 ]
-
-
-// Sort the array in that way that it will always be randon for the player
-cardArray.sort(() => 0.5 - Math.random());
-
 // Create runGame function so we can create the game board cards
 
 function runGame(length) {
     let number = length / 2
     let newArray = cardArray.slice(0, number)
+    // Sort the array in that way that it will always be random for the player
     let doubledArray = newArray.concat(newArray).sort(() => Math.random() - 0.5);
     let cardsCollection = document.getElementsByClassName('flip-card')
     let cardsArray = [...cardsCollection]
