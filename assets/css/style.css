@@ -240,6 +240,8 @@ p {
 /* Congratulations section */
 #congrats {
     background-image: url('/assets/images/back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: auto;
     z-index: 9999;
     border-radius: 10px;
@@ -434,7 +436,35 @@ p {
         width: 100px;
         font-size: small;
     }
+
+    #congrats {
+        height: 400px;
+        width: 400px;
+    }
+
+    #congrats h2 {
+        font-size: smaller;
+    }
+
+    #congrats-btn1 {
+        height: 30px;
+        width: 100px;
+        font-size: small;
+    }
+
+    #congrats-btn3 {
+        height: 30px;
+        width: 100px;
+        font-size: small;
+    }
+
+    #congrats-btn3 {
+        height: 30px;
+        width: 100px;
+        font-size: small;
+    }
 }
+
 
 /* For small screens sizes 450px and down*/
 
@@ -509,6 +539,48 @@ p {
     }
 
     #play-btn3 {
+        height: 25px;
+        width: 98px;
+        font-size: small;
+    }
+
+    #congrats {
+        height: 300px;
+        width: 300px;
+    }
+
+    #congrats h2 {
+        font-size: smaller;
+    }
+
+    #result1 {
+
+        font-size: small;
+    }
+
+    #result2 {
+
+        font-size: small;
+    }
+
+    #result3 {
+
+        font-size: small;
+    }
+
+    #congrats-btn1 {
+        height: 25px;
+        width: 98px;
+        font-size: small;
+    }
+
+    #congrats-btn3 {
+        height: 25px;
+        width: 98px;
+        font-size: small;
+    }
+
+    #congrats-btn3 {
         height: 25px;
         width: 98px;
         font-size: small;
