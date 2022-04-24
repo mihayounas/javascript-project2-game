@@ -22,6 +22,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    column-count: 4;
     width: 640px;
     margin: 0 auto;
 
@@ -104,6 +105,7 @@ body {
     background-image: url('../images/beckground.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 /* Score area where we will count the moves and the cards matched */
@@ -358,17 +360,71 @@ p {
 
 /* media queries*/
 
-/* For larger to medium screens size from 1200px wide and down */
-@media screen and (max-width: 1200px) {
+/* For small screens sizes 800px and down*/
+
+@media screen and (max-width: 800px) {
     .pop-up {
-        width: 600px;
-        font-size: x-large;
+        width: 400px;
+    }
+
+    #myModal {
+        font-size: xx-small;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        width: 90px;
+        height: 120px;
+    }
+
+    .flip-card-front img,
+    .flip-card-back img {
+        width: 90px;
+        height: 120px;
+    }
+
+    .flip-card {
+        width: 90px;
+        height: 120px;
     }
 
     .wrapper-game-area {
-
-        font-size: large;
+        width: 400px;
 
     }
 
+}
+
+/* For small screens sizes 450px and down*/
+
+@media screen and (max-width: 450px) {
+    .pop-up {
+        width: 300px;
+    }
+
+    #myModal {
+        font-size: xx-small;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        width: 70px;
+        height: 110px;
+    }
+
+    .flip-card-front img,
+    .flip-card-back img {
+        width: 70px;
+        height: 110px;
+    }
+
+    .flip-card {
+        width: 70px;
+        height: 110px;
+    }
+
+    .wrapper-game-area {
+        width: 300px;
+
+    }
 }
