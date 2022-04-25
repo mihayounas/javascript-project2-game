@@ -239,7 +239,7 @@ p {
 
 /* Congratulations section */
 #congrats {
-    background-image: url('/assets/images/pink2.jpeg');
+    background-image: url('../images/pink2.jpeg');
     overflow: auto;
     z-index: 9999;
     border-radius: 10px;
