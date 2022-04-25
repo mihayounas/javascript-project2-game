@@ -8,7 +8,17 @@ Welcome to <a href="https://mihayounas.github.io/javascript-project2-game/" targ
 # Site Structure
 
 Brain Wizzz Memory game website one [landing-page](index.html) and a pop up modal with game description and 3 difficulty levels to chose from.
+* Intuitve instructions modal -easy to use and understand.
+* Call to action: Encourage the user to take action.
 
+# Game Board
+
+* Cards: clickable, and turn on click.
+* Logic: if the cards match ,they will remain revealed.
+* Moves counter: after each move (when two cards turned) the counter updates.
+* Congratulations modal -when all the pair have been found this modal will pop up.
+* Call to action: encourage the user to take action. Chose a different level.
+* Refresh and ifor button will restart the game and the info modal will reappear .
 
 ## Design
 * ### Font 
@@ -95,7 +105,8 @@ Rex Removals site was tested on the following browsers with no visible issues fo
    Brain Wizzz website will be definetly updated in the future with following :
    * Multiple player option will be added;
    * Performance stars will be added;
-   * Best score and best time will be also added to the game;
+   * Best score and best time will be also added to the game
+   * Timed mode: add a timer to make the game more challenging, i.e. finish game before timer runs out.
    
 
     ## Additional Testing
