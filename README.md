@@ -89,6 +89,7 @@ Rex Removals site was tested on the following browsers with no visible issues fo
 * ### Resolved
 * html 1 error - of empty heading.
 ![empty-heading-resolved](/assets/images/error.png)
+* Favicon icon not loading into the console - fixed- the icon could not be found because of the name so renaming it fixed the error .
 
     ## Future Features :
    Brain Wizzz website will be definetly updated in the future with following :
