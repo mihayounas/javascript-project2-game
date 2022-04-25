@@ -19,7 +19,6 @@ Brain Wizzz Memory game website one [landing-page](index.html) and a pop up moda
 * Congratulations modal -when all the pair have been found this modal will pop up.
 * Call to action: encourage the user to take action. Chose a different level.
 * Refresh and ifor button will restart the game and the info modal will reappear .
-
 ## Design
 * ### Font 
 The fonts chosen were 'Josefin' and 'Lobster'.The fall back is sans-serif. The two fonts chosen go really good together and it provides really good contrast .
