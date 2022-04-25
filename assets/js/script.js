@@ -229,6 +229,4 @@ function stopGame() {
 
     var audio = new Audio("Winning-game-sound-effect.mp3");
     audio.play();
-
-
 }
