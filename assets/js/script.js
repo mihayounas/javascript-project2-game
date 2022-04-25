@@ -1,12 +1,12 @@
-//** Wait for Dom to load before running the game*/
+// Wait for Dom to load before running the game
 document.addEventListener("DOMContentLoaded", function() {
-    //** Create pop up modal function*/
+    // Create pop up modal function
     var btn = document.getElementById("myBtn");
     btn.onclick = function() {
         modal.style.display = "block";
 
     }
-    //** When the user clicks anywhere outside of the modal, close it*/
+    // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "block";
@@ -20,7 +20,7 @@ var modal = document.getElementById("myModal");
 let time = 0;
 let interval;
 
-//**  Create our html elements Cards with classes and ids */
+// Create our html elements Cards with classes and ids 
 
 function createCard(object) {
     let li = document.createElement('li');
@@ -55,7 +55,7 @@ function createCard(object) {
     document.getElementById('cards-container').appendChild(li);
 }
 
-//** Create an array of cards with image sources and names */
+// Create an array of cards with image sources and names 
 
 let cardArray = [{
         name: 'cat',
@@ -98,7 +98,7 @@ let cardArray = [{
         img: 'assets/images/dugee.jpeg'
     },
 ]
-//** Create runGame function so we can create the game board cards */
+// Create runGame function so we can create the game board cards 
 
 function runGame(length) {
     let number = length / 2
@@ -111,11 +111,11 @@ function runGame(length) {
         card.remove();
 
     })
-    //** Make the array of cards doubled in order to have a pair for each */
+    // Make the array of cards doubled in order to have a pair for each 
     for (i = 0; i < doubledArray.length; i++) {
         createCard(doubledArray[i]);
     }
-    //** Create the click event to make the cards flip on click */
+    // Create the click event to make the cards flip on click 
 
     cardsCollection = document.getElementsByClassName('flip-card');
     cardsArray = [...cardsCollection];
@@ -124,33 +124,28 @@ function runGame(length) {
             let cardElement = event.target.parentNode.parentNode;
 
             if (cardElement.style.transform !== 'rotateY(180deg)' && cardElement.classList.contains('flip-card-inner')) {
-                //** Add audio file on click */
+                // Add audio file on click 
                 var audio = new Audio("Card-flip-sound-effect.mp3");
                 audio.play();
-                //** Rotate the cards when clicked */
+                // Rotate the cards when clicked 
                 cardElement.style.transform = 'rotateY(180deg)';
                 let selectedOption = event.target.getAttribute('data-name');
                 moves++;
                 document.getElementById('score').innerHTML = Math.floor(moves / 2);
                 setTimeout(() => {
-                    //** If the cards are matched and there is none left the game will be finished */
+                    // If the cards are matched and there is none left the game will be finished 
                     matchOption(selectedOption);
                     if (cardsArray.length === cardsMatched * 2) {
                         stopGame();
                     }
-
                 }, 500);
-
             }
         })
-
-
-
     });
     startTime();
 }
 
-//** Create time variable for keeping the time for the player */
+// Create time variable for keeping the time for the player 
 function startTime() {
     clearTimeout(interval)
     time = 0;
@@ -158,24 +153,20 @@ function startTime() {
         time++;
         document.getElementById('time').innerHTML = time + 's';
     }, 500);
-
 }
 
-//** Declare variables which we will use to match the cards and count the moves */
+// Declare variables which we will use to match the cards and count the moves 
 let option1 = '';
 let option2 = '';
 let moves = 0
 let cardsMatched = 0
 
-//** Create matchOption function so we can match our cards in pairs */
-
+// Create matchOption function so we can match our cards in pairs 
 function matchOption(selectedOption) {
     if (option1 === '') {
         option1 = selectedOption;
-
     } else if (option1 !== '') {
         option2 = selectedOption;
-
     }
     if (option1 !== '' && option2 !== '') {
         if (option1 === option2) {
@@ -188,41 +179,38 @@ function matchOption(selectedOption) {
             flipBack(option2);
             option1 = '';
             option2 = '';
-
         }
     }
 }
 
-
-//** Create flipBack function so that our cards will flip back if they do not match */
+// Create flipBack function so that our cards will flip back if they do not match 
 
 function flipBack(option) {
     document.querySelectorAll(`img[data-name=${option}]`).forEach((card) => {
         card.parentNode.parentNode.style.transform = 'rotateY(0deg)';
     });
-
 }
 
-//** Create functions to control levels of difficulty */
-//** Easy Level */
+// Create functions to control levels of difficulty
+// Easy Level
 function easylevel() {
     runGame(8);
     modal.style.display = "none";
     congrats.style.display = "none";
 }
-//** Medium Level */
+// Medium Level
 function mediumlevel() {
     runGame(12);
     modal.style.display = "none";
     congrats.style.display = "none";
 }
-//** Hard Level */
+// Hard Level 
 function hardlevel() {
     runGame(16);
     modal.style.display = "none";
     congrats.style.display = "none";
 }
-//** Game finished refresh everything and start again */
+// Game finished refresh everything and start again
 
 function stopGame() {
     document.getElementById('congrats').style.display = 'block';
