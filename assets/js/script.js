@@ -99,7 +99,10 @@ let cardArray = [{
     },
 ]
 // Create runGame function so we can create the game board cards 
-
+/**
+ * The main game "loop", called when the script is first loaded
+ * and after the user's choice has been processed
+ */
 function runGame(length) {
     let number = length / 2
     let newArray = cardArray.slice(0, number)
