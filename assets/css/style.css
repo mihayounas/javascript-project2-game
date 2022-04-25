@@ -239,9 +239,7 @@ p {
 
 /* Congratulations section */
 #congrats {
-    background-image: url('/assets/images/back.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url('/assets/images/pink2.jpeg');
     overflow: auto;
     z-index: 9999;
     border-radius: 10px;
@@ -283,7 +281,7 @@ p {
 #congrats h2 {
     color: white;
     font-family: 'Lobster', sans-serif;
-    font-size: x-large;
+    font-size: xxx-large;
     text-align: center;
 }
 
@@ -310,21 +308,21 @@ p {
 
 /*Congrats pop up modal buttons to connect to the levels*/
 #congrats-btn1 {
-    height: 30px;
-    width: 120px;
+    height: 50px;
+    width: 170px;
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
     color: white;
     font-weight: bolder;
     font-size: large;
-
+    top: 100px;
 
 }
 
 /* Hard Level button */
 #congrats-btn2 {
-    height: 30px;
-    width: 120px;
+    height: 50px;
+    width: 170px;
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
     color: white;
@@ -335,8 +333,8 @@ p {
 
 /* Medium Level button */
 #congrats-btn3 {
-    height: 30px;
-    width: 130px;
+    height: 50px;
+    width: 170px;
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
     color: white;
@@ -443,7 +441,7 @@ p {
     }
 
     #congrats h2 {
-        font-size: smaller;
+        font-size: x-large;
     }
 
     #congrats-btn1 {
@@ -452,7 +450,7 @@ p {
         font-size: small;
     }
 
-    #congrats-btn3 {
+    #congrats-btn2 {
         height: 30px;
         width: 100px;
         font-size: small;
@@ -550,7 +548,7 @@ p {
     }
 
     #congrats h2 {
-        font-size: smaller;
+        font-size: large;
     }
 
     #result1 {
