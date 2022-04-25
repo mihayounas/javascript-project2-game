@@ -39,12 +39,13 @@ Depending on the level chosen it can be 8 , 12 or 16.
 * Section controled with JavaScript that will pop up on loading the page for the user to understand the game and select the desired level of difficulty. 
 ![Modal1](/assets/images/popup1.png)
 * ### The Congratulations Modal
-* Section controled with JavaScript that will pop up on finishing the level and showing the results , for example the cards that have been matched ,time and how many moves.
-![Congrats]
+* Section controled with JavaScript that will pop up on finishing the level and showing the results , for example the cards that have been matched ,time and how many moves.The player will also have a choice of a different level.
+![Congrats](/assets/images/congrats.png)
 
 # Technologies Used
 * [HTML5](https://www.w3schools.com/html/) - provides the content and structure for the website.
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - provides the styling.
+* [JavaScript](https://www.w3schools.com/js/)-provides interactivity.
 * [Gitpod](https://www.gitpod.io/#get-started) - used to deploy the website.
 * [Github](https://github.com/) - used to host and edit the website.
 
@@ -60,16 +61,20 @@ Brain Wizzz website has been properly tested ,all the code has been run through 
 
 ![CSS Validator test result](/assets/images/css.png)
 
+### Javascript Validator results are below:
+
+![Javascript Validator test results](/assets/images/javascript.png)
+
 ## Responsiveness Test
 
 * The responsive design tests were carried out manually with [Responsive Design Checker](https://www.responsivedesignchecker.com/) ,I can confirm that all the tests were passed.
-![Responsive-design-checker-image-desktop]()
-![Responsive-design-checker-image-mobile]()
+![Responsive-design-checker-image-desktop](/assets/images/desk.png)
+![Responsive-design-checker-image-mobile](/assets/images/mobile.png)
 * The testing was also done through Google Chrome Dev Tools by selecting a device of your choice as follows :
 
-![Dev-Tools-image]()
+![Dev-Tools-image](/assets/images/responsive1.png)
 
-![Dev-Tools-Devices-image]()
+![Dev-Tools-Devices-image](/assets/images/responsive2.png)
 
 ## Browser Compatibility
 
@@ -82,13 +87,14 @@ Rex Removals site was tested on the following browsers with no visible issues fo
 
 ## Known Bugs
 * ### Resolved
-* 
-
-* ### Unresolved
-    * 
+* html 1 error - of empty heading.
+![empty-heading-resolved](/assets/images/error.png)
 
     ## Future Features :
    Brain Wizzz website will be definetly updated in the future with following :
+   * Multiple player option will be added;
+   * Performance stars will be added;
+   * Best score and best time will be also added to the game;
    
 
     ## Additional Testing
@@ -103,11 +109,11 @@ The results are as follows:
 
 1. For the Desktop:
 
-![Lighthouse-Desktop]()
+![Lighthouse-Desktop](/assets/images/desktop.png)
 
 2. For the Mobile:
 
-![Lighthouse-mobile]()
+![Lighthouse-mobile](/assets/images/mobilelighthouse.png)
 
 
 
@@ -116,22 +122,16 @@ The results are as follows:
 The site was deployed to GitHub pages. 
 The steps to deploy a site are as follows:
   1. In the GitHub repository, navigate to the **Settings** tab.
-  2. Once in Settings, navigate to the **GitHub Pages** down on the page.
-  3. Under **GitHub Pages** will be a message "Pages settings now has its own dedicated tab! Check it out here!",
+  2. Once in Settings, navigate to the **Pages** on the left side menu.
 
-![Github-pages]()
-
-  4. Press "Check it out here!" and it will take us to **GitHub Pages** where we can name our project.
-  5. Once named we can select the main branch,we have to press save.After pressing save we will be provided with a link to our repository and when refreshed it will show that is it a live website , therefore successful deployment.
-
-  ![Deploying]()
+  ![Deploying](/assets/images/git.png)
 
  The live link to the Github repository can be found here : https://mihayounas.github.io/javascript-project2-game/ .
 
  ### **To create a local clone of this project**
 The method from cloning a project from GitHub is below:
 1. Under the repository’s name, click on the **code** tab.
-![Clone-img]()
+![Clone-img](/assets/images/clone.png)
 2. In your preffered IDE open **Git Bash**
 3. Change the working directory with the location where you would like your clone to be created .
 4. Type **git clone** and the paste the URL copied previously.
@@ -140,11 +140,13 @@ The method from cloning a project from GitHub is below:
 # Credits
 
 ### Content
-*The fireworks template came from https://slicker.me/javascript/fireworks.htm
+
 * The font came from [Google Fonts](https://fonts.google.com/).
 * The colour scheme was made by [Colormind](http://colormind.io/).
-* The icons came from [Font Awesome](https://fontawesome.com/).
+* The icons came from [Favicon icon](https://favicon.io/).
 * Some of the code ideas came from  [Stack Overflow](https://stackoverflow.com/).
+* Some more research on Slack .
+
  ### Media
  * The photos all came from [Google](google.com)
  
