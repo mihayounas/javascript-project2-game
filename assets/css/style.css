@@ -17,13 +17,13 @@
 
 .wrapper-game-area {
     background: pink;
-    border-radius: 10px;
+    border-radius: 1em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     column-count: 4;
-    width: 640px;
+    width: 30em;
     margin: 0 auto;
 
 
@@ -49,11 +49,12 @@
 
 .flip-card {
     background-color: transparent;
-    width: 130px;
-    height: 160px;
+    width: 6em;
+    height: 7em;
     perspective: 1000px;
     list-style-type: none;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .flip-card-inner {
@@ -63,15 +64,17 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 20px;
     transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
 }
 
 .flip-card-front,
 .flip-card-back {
     position: absolute;
     backface-visibility: hidden;
-    width: 130px;
-    height: 160px;
+    width: 6em;
+    height: 7em;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .flip-card-back {
@@ -80,19 +83,21 @@
 
 .flip-card-front img {
     object-fit: cover;
-    width: 130px;
-    height: 160px;
+    width: 6em;
+    height: 7em;
     border-radius: 20px;
     border: 6px double black;
+    cursor: pointer;
 
 }
 
 .flip-card-back img {
     object-fit: cover;
-    width: 130px;
-    height: 160px;
+    width: 6em;
+    height: 7em;
     border-radius: 20px;
     border: 6px double black;
+    cursor: pointer;
 
 }
 
