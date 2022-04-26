@@ -27,7 +27,7 @@ The fonts chosen were 'Josefin' and 'Lobster'.The fall back is sans-serif. The t
 
 * ### Colour Scheme
  The color scheme chosen is based on pink,purple and black .The colors are consistent throughout the website .
- ![Color-scheme](/assets/images/colorpallette.png)
+ ![Color-scheme](/assets/images/new-color-pallette.png)
 
 # Features
 Brain Wizzz website is set up to be easy to use . It contains features that a user would be fimiliar with ,such as game levels Easy,Medium and Hard.Also user will be able to see the moves he made,how many cards he matched and how long did he take to play.
