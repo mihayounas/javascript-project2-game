@@ -81,7 +81,7 @@ Brain Wizzz website has been properly tested ,all the code has been run through 
 
 ### Javascript Validator results are below:
 JS Hint Test:
-![JS-hint]()
+![JS-hint](/assets/images/jstestinggg.png)
 
 ![Javascript Validator test results](/assets/images/javascript.png)
 

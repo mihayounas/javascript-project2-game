@@ -162,6 +162,7 @@ let option2 = '';
 let moves = 0;
 let cardsMatched = 0;
 let i;
+let congrats;
 
 // Create matchOption function so we can match our cards in pairs 
 function matchOption(selectedOption) {
