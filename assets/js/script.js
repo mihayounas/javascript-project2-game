@@ -123,7 +123,7 @@ function runGame(length) {
 
             if (cardElement.style.transform !== 'rotateY(180deg)' && cardElement.classList.contains('flip-card-inner')) {
                 // Add audio file on click 
-                var audio = new Audio("/assets/sounds/Card-flip-sound-effect.mp3");
+                var audio = new Audio("../assets/sounds/Card-flip-sound-effect.mp3");
                 audio.play();
                 // Rotate the cards when clicked 
                 cardElement.style.transform = 'rotateY(180deg)';
@@ -177,12 +177,12 @@ function matchOption(selectedOption) {
             option2 = '';
             cardsMatched++;
             document.getElementById('matched-cards').innerHTML = cardsMatched;
-            var audio = new Audio("/assets/sounds/Good-idea-bell.mp3");
+            var audio = new Audio("../assets/sounds/Good-idea-bell.mp3");
             audio.play();
         } else {
             flipBack(option1);
             flipBack(option2);
-            var audio = new Audio("/assets/sounds/Error-sound.mp3");
+            var audio = new Audio("../assets/sounds/Error-sound.mp3");
             audio.play();
             option1 = '';
             option2 = '';
@@ -237,6 +237,6 @@ function stopGame() {
     moves = '';
     cardsMatched = '';
 
-    var audio = new Audio("/assets/sounds/Winning-game-sound-effect.mp3");
+    var audio = new Audio("../assets/sounds/Winning-game-sound-effect.mp3");
     audio.play();
 }
