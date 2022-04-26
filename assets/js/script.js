@@ -177,9 +177,13 @@ function matchOption(selectedOption) {
             option2 = '';
             cardsMatched++;
             document.getElementById('matched-cards').innerHTML = cardsMatched;
+            var audio = new Audio("Good-idea-bell.mp3");
+            audio.play();
         } else {
             flipBack(option1);
             flipBack(option2);
+            var audio = new Audio("Error-sound.mp3");
+            audio.play();
             option1 = '';
             option2 = '';
         }
@@ -190,6 +194,7 @@ function matchOption(selectedOption) {
 
 function flipBack(option) {
     document.querySelectorAll(`img[data-name=${option}]`).forEach((card) => {
+
         card.parentNode.parentNode.style.transform = 'rotateY(0deg)';
     });
 }

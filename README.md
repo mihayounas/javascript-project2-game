@@ -154,6 +154,7 @@ The method from cloning a project from GitHub is below:
 
 * The font came from [Google Fonts](https://fonts.google.com/).
 * The colour scheme was made by [Colormind](http://colormind.io/).
+* Sound effect came from [Notification Sounds](https://notification-sounds.com/)
 * The icons came from [Favicon icon](https://favicon.io/).
 * Some of the code ideas came from  [Stack Overflow](https://stackoverflow.com/).
 * Some more research on Slack .
