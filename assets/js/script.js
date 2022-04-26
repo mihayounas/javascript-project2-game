@@ -177,7 +177,6 @@ function matchOption(selectedOption) {
             option2 = '';
             cardsMatched++;
             document.getElementById('matched-cards').innerHTML = cardsMatched;
-            document.getElementById('matched-cards').fadeIn(1).delay(6000)
         } else {
             flipBack(option1);
             flipBack(option2);
