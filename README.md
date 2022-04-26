@@ -3,6 +3,7 @@
 Brain Wizzz memory game is a game that challenges people visual memory in order to match two cards to clear the board.
 
 Welcome to <a href="https://mihayounas.github.io/javascript-project2-game/" target="_blank" rel="noopener">Brain Wizzz</a>
+![Wireframes](/assets/images/wireframes.png)
 
 
 # Site Structure
@@ -10,7 +11,7 @@ Welcome to <a href="https://mihayounas.github.io/javascript-project2-game/" targ
 Brain Wizzz Memory game website one [landing-page](index.html) and a pop up modal with game description and 3 difficulty levels to chose from.
 * Intuitve instructions modal -easy to use and understand.
 * Call to action: Encourage the user to take action.
-![Wireframes](/assets/images/wireframes.png)
+
 # Game Board
 
 * Cards: clickable, and turn on click.
