@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         }
     }
-
-
 })
 var modal = document.getElementById("myModal");
 let time = 0;
@@ -25,7 +23,6 @@ let interval;
 function createCard(object) {
     let li = document.createElement('li');
     li.classList.add('flip-card');
-
 
     let divInner = document.createElement('div');
     divInner.classList.add('flip-card-inner');
@@ -54,7 +51,6 @@ function createCard(object) {
 
     document.getElementById('cards-container').appendChild(li);
 }
-
 // Create an array of cards with image sources and names 
 
 let cardArray = [{
@@ -198,7 +194,6 @@ function flipBack(option) {
         card.parentNode.parentNode.style.transform = 'rotateY(0deg)';
     });
 }
-
 // Create functions to control levels of difficulty
 // Easy Level
 function easylevel() {
@@ -219,7 +214,6 @@ function hardlevel() {
     congrats.style.display = "none";
 }
 // Game finished refresh everything and start again
-
 function stopGame() {
     document.getElementById('congrats').style.display = 'block';
 

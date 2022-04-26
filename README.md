@@ -4,6 +4,7 @@ Brain Wizzz memory game is a game that challenges people visual memory in order 
 
 Welcome to <a href="https://mihayounas.github.io/javascript-project2-game/" target="_blank" rel="noopener">Brain Wizzz</a>
 ![Wireframes](/assets/images/wireframes2.png)
+![wireframe](/assets/images/schetch.png)
 
 
 # Site Structure
@@ -52,6 +53,13 @@ Depending on the level chosen it can be 8 , 12 or 16.
 * Section controled with JavaScript that will pop up on finishing the level and showing the results , for example the cards that have been matched ,time and how many moves.The player will also have a choice of a different level.
 ![Congrats](/assets/images/congrats.png)
 
+   ## Future Features :
+   Brain Wizzz website will be definetly updated in the future with following :
+   * Multiple player option will be added;
+   * Performance stars will be added;
+   * Best score and best time will be also added to the game
+   * Timed mode: add a timer to make the game more challenging, i.e. finish game before timer runs out.
+
 # Technologies Used
 * [HTML5](https://www.w3schools.com/html/) - provides the content and structure for the website.
 * [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - provides the styling.
@@ -72,6 +80,8 @@ Brain Wizzz website has been properly tested ,all the code has been run through 
 ![CSS Validator test result](/assets/images/css.png)
 
 ### Javascript Validator results are below:
+JS Hint Test:
+![JS-hint]()
 
 ![Javascript Validator test results](/assets/images/javascript.png)
 
@@ -100,15 +110,6 @@ Rex Removals site was tested on the following browsers with no visible issues fo
 * html 1 error - of empty heading.
 ![empty-heading-resolved](/assets/images/error.png)
 * Favicon icon not loading into the console - fixed- the icon could not be found because of the name so renaming it fixed the error .
-
-    ## Future Features :
-   Brain Wizzz website will be definetly updated in the future with following :
-   * Multiple player option will be added;
-   * Performance stars will be added;
-   * Best score and best time will be also added to the game
-   * Timed mode: add a timer to make the game more challenging, i.e. finish game before timer runs out.
-   
-
     ## Additional Testing
 ### Lighthouse
 The website was tested using [Google Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome Developer Tools to test each of the pages for:
@@ -127,7 +128,7 @@ The results are as follows:
 
 ![Lighthouse-mobile](/assets/images/mobilelighthouse.png)
 
- * ### Deployment: 
+# Deployment: 
 The site was deployed to GitHub pages. 
 The steps to deploy a site are as follows:
   1. In the GitHub repository, navigate to the **Settings** tab.

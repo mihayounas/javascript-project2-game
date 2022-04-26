@@ -10,8 +10,6 @@
 
 }
 
-
-
 /* Display of the front and back side of the displayed cards */
 /* Game area wrapper styling */
 
@@ -467,9 +465,7 @@ p {
     }
 }
 
-
 /* For small screens sizes 450px and down*/
-
 @media screen and (max-width: 450px) {
     .pop-up {
         width: 300px;
@@ -501,7 +497,6 @@ p {
     .wrapper-game-area {
         width: 300px;
 
-
     }
 
     .score-area div {
@@ -518,8 +513,6 @@ p {
         font-size: large;
         height: 30px;
         width: 150px;
-
-
     }
 
     .pop-up h2,

@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
     <!--Header Containing title , moves count and a timer -->
     <header>
 
@@ -25,64 +24,44 @@
         <div class="controls-area">
             <button id="myBtn">Refresh and Info</button>
         </div>
-
-
-
     </header>
-
-
     <!--  Game Section  -->
     <section>
         <h5>Good Luck</h5>
         <div class="wrapper-game-area">
-
             <div class="score-area">
-
                 <div>Moves: <span id="score">0</span>
                 </div>
 
                 <div>Cards Matched: <span id="matched-cards">0</span>
                 </div>
 
-
                 <div>Time: <span id="time">0s</span>
                 </div>
-
-
             </div>
             <ul class="cards" id="cards-container"></ul>
         </div>
     </section>
     <section>
-
-
         <!-- The Modal -->
         <div id="myModal" class="modal">
-
             <!-- Modal content -->
             <div class="pop-up">
                 <div>
-
                     <h2>Please choose your level:</h2>
                     <span id="levels-btn">
                         <input id='play-btn1' type="button" onclick="easylevel()" value="Easy Level" />
                         <input id='play-btn3' type="button" onclick="mediumlevel()" value="Medium Level" />
                         <input id='play-btn2' type="button" onclick="hardlevel()" value="Hard Level" /></span>
-
                     <h2>Welcome to Brain Wizzz Memory Game</h2>
                     <h3>Understanding the Game</h3>
-
                     <p>When a player turns over two cards that do not match, those cards are turned face down again (in the same position). The trick is to remember which cards are where.Try Your best to finish as soon as possible as the time is going quick.Also at the end you will be able to check how many pairs you have collected throught the level chosen.Good Luck!</p>
-
                 </div>
             </div>
-
         </div>
-
     </section>
 
     <section id="congrats">
-
         <h2>Congratulations!</h2>
         <div id="result1"> Moves:</div>
         <div id="result2">Time:</div>
@@ -92,8 +71,6 @@
             <input id='congrats-btn1' type="button" onclick="easylevel()" value="Easy Level" />
             <input id='congrats-btn3' type="button" onclick="mediumlevel()" value="Medium Level" />
             <input id='congrats-btn2' type="button" onclick="hardlevel()" value="Hard Level" /></span>
-
-
     </section>
     <!--Link to javascipt file-->
     <script src=" assets/js/script.js">
