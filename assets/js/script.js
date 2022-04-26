@@ -162,7 +162,7 @@ let option2 = '';
 let moves = 0;
 let cardsMatched = 0;
 let i;
-let congrats;
+
 
 // Create matchOption function so we can match our cards in pairs 
 function matchOption(selectedOption) {
@@ -203,19 +203,19 @@ function flipBack(option) {
 function easyLevel() {
     runGame(8);
     modal.style.display = "none";
-    congrats.style.display = "none";
+    document.getElementById('congrats').style.display = "none";
 }
 // Medium Level
 function mediumLevel() {
     runGame(12);
     modal.style.display = "none";
-    congrats.style.display = "none";
+    document.getElementById('congrats').style.display = "none";
 }
 // Hard Level 
 function hardLevel() {
     runGame(16);
     modal.style.display = "none";
-    congrats.style.display = "none";
+    document.getElementById('congrats').style.display = "none";
 }
 
 function refreshGame() {
