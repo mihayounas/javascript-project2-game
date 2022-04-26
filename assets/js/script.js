@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function() {
     var btn = document.getElementById("myBtn");
     btn.onclick = function() {
         modal.style.display = "block";
-    }
+    };
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "block";
         }
-    }
-})
+    };
+});
 var modal = document.getElementById("myModal");
 let time = 0;
 let interval;
@@ -91,16 +91,16 @@ let cardArray = [{
         name: 'duggee',
         img: 'assets/images/dugee.jpeg'
     },
-]
+];
 // Create runGame function so we can create the game board cards 
 /**
  * The main game "loop", called when the script is first loaded
  * and after the user's choice has been processed
  */
 function runGame(length) {
-    refreshGame()
-    let number = length / 2
-    let newArray = cardArray.slice(0, number)
+    refreshGame();
+    let number = length / 2;
+    let newArray = cardArray.slice(0, number);
     //** Sort the array in that way that it will always be random for the player */
     let doubledArray = newArray.concat(newArray).sort(() => Math.random() - 0.5);
     let cardsCollection = document.getElementsByClassName('flip-card');
@@ -108,7 +108,7 @@ function runGame(length) {
     cardsArray.forEach((card) => {
         card.remove();
 
-    })
+    });
     // Make the array of cards doubled in order to have a pair for each 
     for (i = 0; i < doubledArray.length; i++) {
         createCard(doubledArray[i]);
@@ -138,16 +138,17 @@ function runGame(length) {
                     }
                 }, 500);
             }
-        })
+        });
     });
     startTime();
 }
-document.getElementById('play-btn1').addEventListener('click', () => easyLevel())
-document.getElementById('play-btn3').addEventListener('click', () => mediumLevel())
-document.getElementById('play-btn2').addEventListener('click', () => hardLevel())
+document.getElementById('play-btn1').addEventListener('click', () => easyLevel());
+document.getElementById('play-btn3').addEventListener('click', () => mediumLevel());
+document.getElementById('play-btn2').addEventListener('click', () => hardLevel());
+
 // Create time variable for keeping the time for the player 
 function startTime() {
-    clearTimeout(interval)
+    clearTimeout(interval);
     time = 0;
     interval = setInterval(() => {
         time++;
@@ -158,8 +159,9 @@ function startTime() {
 // Declare variables which we will use to match the cards and count the moves 
 let option1 = '';
 let option2 = '';
-let moves = 0
-let cardsMatched = 0
+let moves = 0;
+let cardsMatched = 0;
+let i;
 
 // Create matchOption function so we can match our cards in pairs 
 function matchOption(selectedOption) {
@@ -218,10 +220,11 @@ function hardLevel() {
 function refreshGame() {
     option1 = '';
     option2 = '';
-    moves = 0
-    cardsMatched = 0
-    clearInterval(interval)
+    moves = 0;
+    cardsMatched = 0;
+    clearInterval(interval);
 }
+
 // Game finished refresh everything and start again
 function stopGame() {
     document.getElementById('congrats').style.display = 'block';
