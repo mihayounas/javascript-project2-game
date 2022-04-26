@@ -30,7 +30,7 @@ function createCard(object) {
     let divInner = document.createElement('div');
     divInner.classList.add('flip-card-inner');
 
-
+    // Create front of the card
     let divFront = document.createElement('div');
     divFront.classList.add('flip-card-front');
 
@@ -39,7 +39,7 @@ function createCard(object) {
     imgFront.setAttribute('data-name', object.name);
     divFront.appendChild(imgFront);
 
-
+    // Create card back side
     let divBack = document.createElement('div');
     divBack.classList.add('flip-card-back');
 

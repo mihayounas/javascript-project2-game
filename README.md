@@ -127,9 +127,6 @@ The results are as follows:
 
 ![Lighthouse-mobile](/assets/images/mobilelighthouse.png)
 
-
-
-
  * ### Deployment: 
 The site was deployed to GitHub pages. 
 The steps to deploy a site are as follows:
@@ -157,15 +154,13 @@ The method from cloning a project from GitHub is below:
 * The colour scheme was made by [Colormind](http://colormind.io/).
 * Sound effect came from [Notification Sounds](https://notification-sounds.com/)
 * The icons came from [Favicon icon](https://favicon.io/).
+* Wireframe was done on [Moqups](https://app.moqups.com/)
 * Some of the code ideas came from  [Stack Overflow](https://stackoverflow.com/).
 * Some more research on Slack .
 
  ### Media
  * The photos all came from [Google](google.com)
  
-
-
-  
    # Acknowledgements
 The site was completed as a Portfolio 2 Project 2 (JavaScript+Html+Css)for the Full Stack Software Developer at the [Code Institute](https://codeinstitute.net/). As such I would like to thank my mentors [Precious Ijege](https://www.linkedin.com/in/precious-ijege-908a00168/), and [Anton Zaharia](http://www.linkedin.com/in/antonzaharia/) for their help and support.
   
