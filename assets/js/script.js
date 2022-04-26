@@ -219,10 +219,9 @@ function stopGame() {
     document.getElementById('congrats').style.display = 'block';
 
     clearTimeout(interval);
-
-    document.getElementById('result1').innerHTML = 'You have made :' + ' ' + moves / 2 + ' ' + 'moves';
-    document.getElementById('result2').innerHTML = 'In' + ' ' + time + ' ' + 'seconds ';
-    document.getElementById('result3').innerHTML = 'And Matched' + ' ' + cardsMatched + ' ' + 'cards';
+    document.getElementById('result1').innerHTML = `You have made: ${moves / 2} moves`;
+    document.getElementById('result2').innerHTML = `In ${time} seconds`;
+    document.getElementById('result3').innerHTML = `And Matched ${cardsMatched} cards`;
 
     moves = '';
     cardsMatched = '';
