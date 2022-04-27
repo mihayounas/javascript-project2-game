@@ -11,7 +11,6 @@ let time = 0;
 let interval;
 
 // Create our html elements Cards with classes and ids 
-
 function createCard(object) {
     let li = document.createElement('li');
     li.classList.add('flip-card');
@@ -178,10 +177,8 @@ function matchOption(selectedOption) {
 }
 
 // Create flipBack function so that our cards will flip back if they do not match 
-
 function flipBack(option) {
     document.querySelectorAll(`img[data-name=${option}]`).forEach((card) => {
-
         card.parentNode.parentNode.style.transform = 'rotateY(0deg)';
     });
 }
@@ -212,7 +209,6 @@ function refreshGame() {
     cardsMatched = 0;
     clearInterval(interval);
 }
-
 // Game finished refresh everything and start again
 function stopGame() {
     document.getElementById('congrats').style.display = 'block';

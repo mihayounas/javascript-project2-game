@@ -235,6 +235,10 @@ p {
     margin-top: 400px;
 }
 
+#moves {
+    color: white;
+}
+
 /*Congratulation area Play Again button styled*/
 #congratsBtn {
     font-size: xx-large;
@@ -406,8 +410,8 @@ p {
     }
 
     #congrats {
-        height: 400px;
-        width: 400px;
+        height: 25em;
+        width: 45em;
     }
 
     #congrats h2 {
@@ -435,9 +439,9 @@ p {
         font-size: small;
     }
 
-    #congrats-btn3 {
+    #congrats-btn2 {
         height: 50px;
-        width: 120px;
+        width: 130px;
         font-size: small;
     }
 
