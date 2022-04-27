@@ -27,7 +27,6 @@ function createCard(object) {
     imgFront.setAttribute('src', 'assets/images/front-side.png');
     imgFront.setAttribute('data-name', object.name);
     divFront.appendChild(imgFront);
-
     // Create card back side
     let divBack = document.createElement('div');
     divBack.classList.add('flip-card-back');
@@ -44,7 +43,6 @@ function createCard(object) {
     document.getElementById('cards-container').appendChild(li);
 }
 // Create an array of cards with image sources and names 
-
 let cardArray = [{
         name: 'cat',
         img: 'assets/images/img1.jpeg'
@@ -104,11 +102,10 @@ function runGame(length) {
 
     });
     // Make the array of cards doubled in order to have a pair for each 
-    for (i = 0; i < doubledArray.length; i++) {
+    for (let i = 0; i < doubledArray.length; i++) {
         createCard(doubledArray[i]);
     }
     // Create the click event to make the cards flip on click 
-
     cardsCollection = document.getElementsByClassName('flip-card');
     cardsArray = [...cardsCollection];
 
@@ -149,15 +146,11 @@ function startTime() {
         document.getElementById('time').innerHTML = time + 's';
     }, 1200);
 }
-
 // Declare variables which we will use to match the cards and count the moves 
 let option1 = '';
 let option2 = '';
 let moves = 0;
 let cardsMatched = 0;
-let i;
-
-
 // Create matchOption function so we can match our cards in pairs 
 function matchOption(selectedOption) {
     if (option1 === '') {
