@@ -101,7 +101,7 @@ JS Hint Test:
 
 ## Browser Compatibility
 
-Rex Removals site was tested on the following browsers with no visible issues for the user:
+Brain Wizzz site was tested on the following browsers with no visible issues for the user:
 1. Google Chrome 
 2. Safari 
 3. Mozilla Firefox
