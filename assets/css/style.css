@@ -336,11 +336,11 @@ p {
 
 /* media queries*/
 
-/* For screens sizes 1024px and down*/
+/* For screens sizes 1024px and up*/
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .pop-up {
-        width: 32em;
+        width: 25em;
         font-size: xx-large;
     }
 
@@ -351,24 +351,23 @@ p {
 
     .flip-card-front,
     .flip-card-back {
-        width: 80px;
-        height: 120px;
+        width: 10em;
+        height: 10em;
     }
 
     .flip-card-front img,
     .flip-card-back img {
-        width: 80px;
-        height: 120px;
+        width: 10em;
+        height: 10em;
     }
 
     .flip-card {
-        width: 80px;
-        height: 120px;
+        width: 10em;
+        height: 10em;
     }
 
     .wrapper-game-area {
-        width: 399px;
-
+        width: 45em;
     }
 
     .score-area div {
