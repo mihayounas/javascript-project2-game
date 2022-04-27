@@ -363,6 +363,124 @@ p {
 
 /* media queries*/
 
+/* For screens sizes 1024px and down*/
+
+@media screen and (max-width: 1024px) {
+    .pop-up {
+        width: 500px;
+        font-size: xx-large;
+    }
+
+    #myModal {
+        font-size: xx-large;
+        font-size: large;
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+        width: 120px;
+        height: 180px;
+    }
+
+    .flip-card-front img,
+    .flip-card-back img {
+        width: 120px;
+        height: 180px;
+    }
+
+    .flip-card {
+        width: 120px;
+        height: 180px;
+    }
+
+    .wrapper-game-area {
+        width: 500px;
+
+    }
+
+    .score-area div {
+        color: white;
+        font-size: large;
+    }
+
+    .score-area span {
+        color: white;
+        font-size: large;
+    }
+
+    #myBtn {
+        font-size: large;
+        height: 30px;
+        width: 150px;
+    }
+
+    .pop-up h2,
+    h3,
+    p {
+        font-size: large;
+    }
+
+    #play-btn1 {
+        height: 50px;
+        width: 120px;
+        font-size: large;
+    }
+
+    #play-btn2 {
+        height: 50px;
+        width: 120px;
+        font-size: large;
+    }
+
+    #play-btn3 {
+        height: 50px;
+        width: 140px;
+        font-size: large;
+    }
+
+    #congrats {
+        height: 400px;
+        width: 400px;
+    }
+
+    #congrats h2 {
+        font-size: x-large;
+    }
+
+    #result1 {
+
+        font-size: large;
+    }
+
+    #result2 {
+
+        font-size: large;
+    }
+
+    #result3 {
+
+        font-size: large;
+    }
+
+    #congrats-btn1 {
+        height: 50px;
+        width: 120px;
+        font-size: small;
+    }
+
+    #congrats-btn3 {
+        height: 50px;
+        width: 120px;
+        font-size: small;
+    }
+
+    #congrats-btn3 {
+        height: 50px;
+        width: 120px;
+        font-size: small;
+    }
+}
+
 /* For small screens sizes 800px and down*/
 
 @media screen and (max-width: 800px) {
