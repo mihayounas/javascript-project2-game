@@ -378,23 +378,23 @@ p {
 
     .flip-card-front,
     .flip-card-back {
-        width: 120px;
-        height: 180px;
+        width: 80px;
+        height: 120px;
     }
 
     .flip-card-front img,
     .flip-card-back img {
-        width: 120px;
-        height: 180px;
+        width: 80px;
+        height: 120px;
     }
 
     .flip-card {
-        width: 120px;
-        height: 180px;
+        width: 80px;
+        height: 120px;
     }
 
     .wrapper-game-area {
-        width: 500px;
+        width: 399px;
 
     }
 
