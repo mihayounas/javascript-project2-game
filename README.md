@@ -4,6 +4,9 @@ Brain Wizzz memory game is a game that challenges people visual memory in order 
 
 Welcome to <a href="https://mihayounas.github.io/javascript-project2-game/" target="_blank" rel="noopener">Brain Wizzz</a>
 ![Wireframes](/assets/images/wireframes2.png)
+
+# Wireframes
+The wireframes for Brain Wizzz were produced in Lucidchart.
 ![wireframe](/assets/images/schetch.png)
 
 
@@ -155,7 +158,8 @@ The method from cloning a project from GitHub is below:
 * The colour scheme was made by [Colormind](http://colormind.io/).
 * Sound effect came from [Notification Sounds](https://notification-sounds.com/)
 * The icons came from [Favicon icon](https://favicon.io/).
-* Wireframe was done on [Moqups](https://app.moqups.com/)
+* Moqup was done on [Moqups](https://app.moqups.com/).
+* Wireframes schetch [Lucidchart](https://lucid.app/).
 * Some of the code ideas came from  [Stack Overflow](https://stackoverflow.com/).
 * Some more research on Slack .
 
