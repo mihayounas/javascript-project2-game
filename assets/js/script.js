@@ -215,7 +215,7 @@ function stopGame() {
     clearTimeout(interval);
     document.getElementById('moves').innerHTML = `You have made: ${moves / 2} moves`;
     document.getElementById('end-time').innerHTML = `In ${time} seconds`;
-    document.getElementById('matches').innerHTML = `And Matched ${cardsMatched} cards`;
+    document.getElementById('matches').innerHTML = `And matched ${cardsMatched} cards`;
 
     moves = '';
     cardsMatched = '';

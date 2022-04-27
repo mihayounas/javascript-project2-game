@@ -436,19 +436,27 @@ p {
     #congrats-btn1 {
         height: 50px;
         width: 120px;
-        font-size: small;
+        font-size: large;
     }
 
     #congrats-btn2 {
         height: 50px;
         width: 130px;
-        font-size: small;
+        font-size: large;
     }
 
     #congrats-btn3 {
         height: 50px;
-        width: 120px;
-        font-size: small;
+        width: 140px;
+        font-size: large;
+    }
+
+    #moves {
+        font-size: x-large;
+    }
+
+    #congrats h2 {
+        font-size: xx-large;
     }
 }
 
