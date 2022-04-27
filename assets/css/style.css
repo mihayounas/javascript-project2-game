@@ -49,7 +49,7 @@
     height: 7em;
     perspective: 1000px;
     list-style-type: none;
-    border-radius: 20px;
+    border-radius: 1.2em;
     cursor: pointer;
 }
 
@@ -132,12 +132,12 @@ body {
 
 header h1 {
     font-family: 'Lobster', sans-serif;
-    font-size: 50px;
+    font-size: 3em;
 }
 
 /* Modal Pop up styling */
 .pop-up {
-    width: 720px;
+    width: 45em;
     background: pink;
     border-radius: 10px;
     display: flex;
@@ -251,8 +251,8 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-    width: 620px;
-    height: 500px;
+    width: 39em;
+    height: 32em;
     border: 6px double black;
 }
 
@@ -367,7 +367,7 @@ p {
 
 @media screen and (max-width: 1024px) {
     .pop-up {
-        width: 500px;
+        width: 32em;
         font-size: xx-large;
     }
 

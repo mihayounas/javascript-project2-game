@@ -117,10 +117,10 @@ function runGame(length) {
 
     cardsCollection = document.getElementsByClassName('flip-card');
     cardsArray = [...cardsCollection];
+
     cardsArray.forEach((card) => {
         card.addEventListener('click', (event) => {
             let cardElement = event.target.parentNode.parentNode;
-
             if (cardElement.style.transform !== 'rotateY(180deg)' && cardElement.classList.contains('flip-card-inner')) {
                 // Add audio file on click 
                 var audio = new Audio("assets/sounds/Card-flip-sound-effect.mp3");
