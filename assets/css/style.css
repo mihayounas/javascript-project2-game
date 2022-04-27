@@ -84,7 +84,6 @@
     border-radius: 20px;
     border: 6px double black;
     cursor: pointer;
-
 }
 
 .flip-card-back img {
@@ -94,7 +93,6 @@
     border-radius: 20px;
     border: 6px double black;
     cursor: pointer;
-
 }
 
 /* Styling the body area */
@@ -107,7 +105,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 1000px;
-
 }
 
 /* Score area where we will count the moves and the cards matched */
@@ -166,11 +163,10 @@ p {
     bottom: 0;
     overflow: auto;
     z-index: 9999;
-
 }
 
 /* Modal area buttons */
-#myBtn {
+#refresh-btn {
     font-size: x-large;
     border-radius: 10px;
     color: white;
@@ -180,14 +176,15 @@ p {
     border-radius: 20px;
 }
 
-#myBtn:hover {
+#refresh-btn:hover {
     background-color: rgb(247, 133, 205);
     color: white;
     cursor: pointer;
 }
 
-/* Easy Level button */
-#play-btn1 {
+/* Easy and Hard Level buttons */
+#easy-btn,
+#hard-btn {
     height: 30px;
     width: 120px;
     background-color: rgb(224, 128, 144);
@@ -195,24 +192,10 @@ p {
     color: white;
     font-weight: bolder;
     font-size: large;
-
-
-}
-
-/* Hard Level button */
-#play-btn2 {
-    height: 30px;
-    width: 120px;
-    background-color: rgb(224, 128, 144);
-    border-radius: 20%;
-    color: white;
-    font-weight: bolder;
-    font-size: large;
-
 }
 
 /* Medium Level button */
-#play-btn3 {
+#medium-btn {
     height: 30px;
     width: 130px;
     background-color: rgb(224, 128, 144);
@@ -220,21 +203,12 @@ p {
     color: white;
     font-weight: bolder;
     font-size: large;
-
 }
 
 /* Setup hover for each Level button */
-#play-btn3:hover {
-    background-color: rgb(147, 86, 238);
-    cursor: pointer;
-}
-
-#play-btn1:hover {
-    background-color: rgb(147, 86, 238);
-    cursor: pointer;
-}
-
-#play-btn2:hover {
+#easy-btn:hover,
+#medium-btn:hover,
+#hard-btn:hover {
     background-color: rgb(147, 86, 238);
     cursor: pointer;
 }
@@ -271,7 +245,6 @@ p {
     border-radius: 20px;
     text-decoration: none;
     color: white;
-
 }
 
 #congrats h1 {
@@ -298,12 +271,12 @@ p {
     font-size: x-large;
 }
 
-#result2 {
+#end-time {
     color: white;
     font-size: x-large;
 }
 
-#result3 {
+#matches {
     color: white;
     font-size: x-large;
 }
@@ -408,7 +381,7 @@ p {
         font-size: large;
     }
 
-    #myBtn {
+    #refresh-btn {
         font-size: large;
         height: 30px;
         width: 150px;
@@ -420,19 +393,14 @@ p {
         font-size: large;
     }
 
-    #play-btn1 {
+    #easy-btn,
+    #hard-btn {
         height: 50px;
         width: 120px;
         font-size: large;
     }
 
-    #play-btn2 {
-        height: 50px;
-        width: 120px;
-        font-size: large;
-    }
-
-    #play-btn3 {
+    #medium-btn {
         height: 50px;
         width: 140px;
         font-size: large;
@@ -447,17 +415,17 @@ p {
         font-size: x-large;
     }
 
-    #result1 {
+    #moves {
 
         font-size: large;
     }
 
-    #result2 {
+    #end-time {
 
         font-size: large;
     }
 
-    #result3 {
+    #matches {
 
         font-size: large;
     }
@@ -524,7 +492,7 @@ p {
         font-size: large;
     }
 
-    #myBtn {
+    #refresh-btn {
         font-size: large;
         height: 30px;
         width: 150px;
@@ -537,19 +505,9 @@ p {
         font-size: large;
     }
 
-    #play-btn1 {
-        height: 30px;
-        width: 100px;
-        font-size: small;
-    }
-
-    #play-btn2 {
-        height: 30px;
-        width: 100px;
-        font-size: small;
-    }
-
-    #play-btn3 {
+    #easy-btn,
+    #medium-btn,
+    #hard-btn {
         height: 30px;
         width: 100px;
         font-size: small;
@@ -627,7 +585,7 @@ p {
         font-size: small;
     }
 
-    #myBtn {
+    #refresh-btn {
         font-size: large;
         height: 30px;
         width: 150px;
@@ -639,21 +597,11 @@ p {
         font-size: small;
     }
 
-    #play-btn1 {
+    #easy-btn,
+    #medium-btn,
+    #hard-btn {
         height: 25px;
         width: 90px;
-        font-size: small;
-    }
-
-    #play-btn2 {
-        height: 25px;
-        width: 90px;
-        font-size: small;
-    }
-
-    #play-btn3 {
-        height: 25px;
-        width: 98px;
         font-size: small;
     }
 
@@ -666,17 +614,17 @@ p {
         font-size: large;
     }
 
-    #result1 {
+    #moves {
 
         font-size: small;
     }
 
-    #result2 {
+    #end-time {
 
         font-size: small;
     }
 
-    #result3 {
+    #matches {
 
         font-size: small;
     }

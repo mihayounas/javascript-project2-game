@@ -22,7 +22,7 @@
         <!-- Trigger/Open The Modal -->
 
         <div class="controls-area">
-            <button id="myBtn">Refresh and Info</button>
+            <button id="refresh-btn">Refresh and Info</button>
         </div>
     </header>
     <!--  Game Section  -->
@@ -50,9 +50,9 @@
                 <div>
                     <h2>Please choose your level:</h2>
                     <span id="levels-btn">
-                        <input id='play-btn1' type="button" value="Easy Level" />
-                        <input id='play-btn3' type="button" value="Medium Level" />
-                        <input id='play-btn2' type="button" value="Hard Level" /></span>
+                        <input id='easy-btn' type="button" value="Easy Level" />
+                        <input id='medium-btn' type="button" value="Medium Level" />
+                        <input id='hard-btn' type="button" value="Hard Level" /></span>
                     <h2>Welcome to Brain Wizzz Memory Game</h2>
                     <h3>Understanding the Game</h3>
                     <p>When a player turns over two cards that do not match, those cards are turned face down again (in the same position). The trick is to remember which cards are where.Try Your best to finish as soon as possible as the time is going quick.Also at the end you will be able to check how many pairs you have collected throught the level chosen.Good Luck!</p>
@@ -63,9 +63,9 @@
 
     <section id="congrats">
         <h2>Congratulations!</h2>
-        <div id="result1"> Moves:</div>
-        <div id="result2">Time:</div>
-        <div id="result3">Cards Matched:</div>
+        <div id="moves"> Moves:</div>
+        <div id="end-time">Time:</div>
+        <div id="matches">Cards Matched:</div>
         <h2>Challenge Yourself by chosing a more difficult level:</h2>
         <span id="congrats-btn">
             <input id='congrats-btn1' type="button" onclick="easyLevel()" value="Easy Level" />

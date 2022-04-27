@@ -1,15 +1,9 @@
 // Wait for Dom to load before running the game
 document.addEventListener("DOMContentLoaded", function() {
     // Create pop up modal function
-    var btn = document.getElementById("myBtn");
+    var btn = document.getElementById("refresh-btn");
     btn.onclick = function() {
         modal.style.display = "block";
-    };
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "block";
-        }
     };
 });
 var modal = document.getElementById("myModal");
@@ -142,9 +136,9 @@ function runGame(length) {
     });
     startTime();
 }
-document.getElementById('play-btn1').addEventListener('click', () => easyLevel());
-document.getElementById('play-btn3').addEventListener('click', () => mediumLevel());
-document.getElementById('play-btn2').addEventListener('click', () => hardLevel());
+document.getElementById('easy-btn').addEventListener('click', () => easyLevel());
+document.getElementById('medium-btn').addEventListener('click', () => mediumLevel());
+document.getElementById('hard-btn').addEventListener('click', () => hardLevel());
 
 // Create time variable for keeping the time for the player 
 function startTime() {
@@ -230,9 +224,9 @@ function refreshGame() {
 function stopGame() {
     document.getElementById('congrats').style.display = 'block';
     clearTimeout(interval);
-    document.getElementById('result1').innerHTML = `You have made: ${moves / 2} moves`;
-    document.getElementById('result2').innerHTML = `In ${time} seconds`;
-    document.getElementById('result3').innerHTML = `And Matched ${cardsMatched} cards`;
+    document.getElementById('moves').innerHTML = `You have made: ${moves / 2} moves`;
+    document.getElementById('end-time').innerHTML = `In ${time} seconds`;
+    document.getElementById('matches').innerHTML = `And Matched ${cardsMatched} cards`;
 
     moves = '';
     cardsMatched = '';
