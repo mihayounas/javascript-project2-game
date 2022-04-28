@@ -126,7 +126,7 @@ function runGame(length) {
                     if (cardsArray.length === cardsMatched * 2) {
                         stopGame();
                     }
-                }, 500);
+                }, 400);
             }
         });
     });
@@ -143,7 +143,7 @@ function startTime() {
     interval = setInterval(() => {
         time++;
         document.getElementById('time').innerHTML = time + 's';
-    }, 1200);
+    }, 1000);
 }
 // Declare variables which we will use to match the cards and count the moves 
 let option1 = '';
