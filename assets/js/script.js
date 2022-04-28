@@ -123,7 +123,7 @@ function runGame(length) {
                 setTimeout(() => {
                     // If the cards are matched and there is none left the game will be finished 
                     matchOption(selectedOption);
-                    if (cardsArray.length === cardsMatched * 2) {
+                    if (doubledArray.length === cardsMatched / 2) {
                         stopGame();
                     }
                 }, 400);
