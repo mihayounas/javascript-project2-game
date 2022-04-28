@@ -116,17 +116,20 @@ function runGame(length) {
                 var audio = new Audio("assets/sounds/Card-flip-sound-effect.mp3");
                 audio.play();
                 // Rotate the cards when clicked 
-                cardElement.style.transform = 'rotateY(180deg)';
                 let selectedOption = event.target.getAttribute('data-name');
-                moves++;
-                document.getElementById('score').innerHTML = Math.floor(moves / 2);
-                setTimeout(() => {
-                    // If the cards are matched and there is none left the game will be finished 
-                    matchOption(selectedOption);
-                    if (doubledArray.length === cardsMatched / 2) {
-                        stopGame();
-                    }
-                }, 400);
+                if (selectedOption) {
+                    cardElement.style.transform = 'rotateY(180deg)';
+
+                    moves++;
+                    document.getElementById('score').innerHTML = Math.floor(moves / 2);
+                    setTimeout(() => {
+                        // If the cards are matched and there is none left the game will be finished 
+                        matchOption(selectedOption);
+                        if (doubledArray.length === cardsMatched / 2) {
+                            stopGame();
+                        }
+                    }, 500);
+                }
             }
         });
     });
