@@ -119,13 +119,12 @@ function runGame(length) {
                 let selectedOption = event.target.getAttribute('data-name');
                 if (selectedOption) {
                     cardElement.style.transform = 'rotateY(180deg)';
-
                     moves++;
                     document.getElementById('score').innerHTML = Math.floor(moves / 2);
                     setTimeout(() => {
                         // If the cards are matched and there is none left the game will be finished 
                         matchOption(selectedOption);
-                        if (doubledArray.length === cardsMatched / 2) {
+                        if (cardsArray.length === cardsMatched * 2) {
                             stopGame();
                         }
                     }, 500);
