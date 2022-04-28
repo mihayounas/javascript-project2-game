@@ -11,6 +11,7 @@ let time = 0;
 let interval;
 
 // Create our html elements Cards with classes and ids 
+
 function createCard(object) {
     let li = document.createElement('li');
     li.classList.add('flip-card');
@@ -26,6 +27,7 @@ function createCard(object) {
     imgFront.setAttribute('src', 'assets/images/front-side.png');
     imgFront.setAttribute('data-name', object.name);
     divFront.appendChild(imgFront);
+
     // Create card back side
     let divBack = document.createElement('div');
     divBack.classList.add('flip-card-back');
@@ -42,6 +44,7 @@ function createCard(object) {
     document.getElementById('cards-container').appendChild(li);
 }
 // Create an array of cards with image sources and names 
+
 let cardArray = [{
         name: 'cat',
         img: 'assets/images/img1.jpeg'
@@ -101,19 +104,20 @@ function runGame(length) {
 
     });
     // Make the array of cards doubled in order to have a pair for each 
-    for (let i = 0; i < doubledArray.length; i++) {
+    for (i = 0; i < doubledArray.length; i++) {
         createCard(doubledArray[i]);
     }
     // Create the click event to make the cards flip on click 
+
     cardsCollection = document.getElementsByClassName('flip-card');
     cardsArray = [...cardsCollection];
-
     cardsArray.forEach((card) => {
         card.addEventListener('click', (event) => {
             let cardElement = event.target.parentNode.parentNode;
+
             if (cardElement.style.transform !== 'rotateY(180deg)' && cardElement.classList.contains('flip-card-inner')) {
                 // Add audio file on click 
-                var audio = new Audio("assets/sounds/Card-flip-sound-effect.mp3");
+                var audio = new Audio("/assets/sounds/Card-flip-sound-effect.mp3");
                 audio.play();
                 // Rotate the cards when clicked 
                 cardElement.style.transform = 'rotateY(180deg)';
@@ -126,7 +130,7 @@ function runGame(length) {
                     if (cardsArray.length === cardsMatched * 2) {
                         stopGame();
                     }
-                }, 400);
+                }, 500);
             }
         });
     });
@@ -135,7 +139,6 @@ function runGame(length) {
 document.getElementById('easy-btn').addEventListener('click', () => easyLevel());
 document.getElementById('medium-btn').addEventListener('click', () => mediumLevel());
 document.getElementById('hard-btn').addEventListener('click', () => hardLevel());
-
 // Create time variable for keeping the time for the player 
 function startTime() {
     clearTimeout(interval);
@@ -143,13 +146,16 @@ function startTime() {
     interval = setInterval(() => {
         time++;
         document.getElementById('time').innerHTML = time + 's';
-    }, 1000);
+    }, 1200);
 }
+
 // Declare variables which we will use to match the cards and count the moves 
 let option1 = '';
 let option2 = '';
 let moves = 0;
 let cardsMatched = 0;
+let i;
+
 // Create matchOption function so we can match our cards in pairs 
 function matchOption(selectedOption) {
     if (option1 === '') {
@@ -163,12 +169,12 @@ function matchOption(selectedOption) {
             option2 = '';
             cardsMatched++;
             document.getElementById('matched-cards').innerHTML = cardsMatched;
-            var audio = new Audio("assets/sounds/Good-idea-bell.mp3");
+            var audio = new Audio("/assets/sounds/Good-idea-bell.mp3");
             audio.play();
         } else {
             flipBack(option1);
             flipBack(option2);
-            var audio = new Audio("assets/sounds/Error-sound.mp3");
+            var audio = new Audio("/assets/sounds/Error-sound.mp3");
             audio.play();
             option1 = '';
             option2 = '';
@@ -177,8 +183,10 @@ function matchOption(selectedOption) {
 }
 
 // Create flipBack function so that our cards will flip back if they do not match 
+
 function flipBack(option) {
     document.querySelectorAll(`img[data-name=${option}]`).forEach((card) => {
+
         card.parentNode.parentNode.style.transform = 'rotateY(0deg)';
     });
 }
@@ -187,19 +195,16 @@ function flipBack(option) {
 function easyLevel() {
     runGame(8);
     modal.style.display = "none";
-    document.getElementById('congrats').style.display = "none";
 }
 // Medium Level
 function mediumLevel() {
     runGame(12);
     modal.style.display = "none";
-    document.getElementById('congrats').style.display = "none";
 }
 // Hard Level 
 function hardLevel() {
     runGame(16);
     modal.style.display = "none";
-    document.getElementById('congrats').style.display = "none";
 }
 
 function refreshGame() {
@@ -215,11 +220,11 @@ function stopGame() {
     clearTimeout(interval);
     document.getElementById('moves').innerHTML = `You have made: ${moves / 2} moves`;
     document.getElementById('end-time').innerHTML = `In ${time} seconds`;
-    document.getElementById('matches').innerHTML = `And matched ${cardsMatched} cards`;
+    document.getElementById('matches').innerHTML = `And Matched ${cardsMatched} cards`;
 
     moves = '';
     cardsMatched = '';
 
-    var audio = new Audio("assets/sounds/Winning-game-sound-effect.mp3");
+    var audio = new Audio("/assets/sounds/Winning-game-sound-effect.mp3");
     audio.play();
 }
