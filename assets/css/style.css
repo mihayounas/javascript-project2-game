@@ -185,8 +185,7 @@ p {
 /* Easy and Hard Level buttons */
 #easy-btn,
 #hard-btn {
-    height: 30px;
-    width: 120px;
+    height: 2em;
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
     color: white;
@@ -196,8 +195,7 @@ p {
 
 /* Medium Level button */
 #medium-btn {
-    height: 30px;
-    width: 130px;
+    height: 2em;
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
     color: white;
@@ -237,14 +235,15 @@ p {
 
 #moves {
     color: white;
+    font-size: large;
 }
 
 /*Congratulation area Play Again button styled*/
 #congratsBtn {
     font-size: xx-large;
     border-radius: 10px;
-    height: 40px;
-    width: 200px;
+    height: 2.5em;
+    width: 12.5em;
     background-color: rgb(224, 128, 144);
     border-radius: 20px;
     text-decoration: none;
@@ -287,8 +286,8 @@ p {
 
 /*Congrats pop up modal buttons to connect to the levels*/
 #congrats-btn1 {
-    height: 50px;
-    width: 170px;
+    height: 3em;
+    width: 10.5em;
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
     color: white;
@@ -300,26 +299,24 @@ p {
 
 /* Hard Level button */
 #congrats-btn2 {
-    height: 50px;
-    width: 170px;
+    height: 3em;
+    width: 10.5em;
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
     color: white;
     font-weight: bolder;
     font-size: large;
-
 }
 
 /* Medium Level button */
 #congrats-btn3 {
-    height: 50px;
-    width: 170px;
+    height: 3em;
+    width: 10.5em;
     background-color: rgb(224, 128, 144);
     border-radius: 20%;
     color: white;
     font-weight: bolder;
     font-size: large;
-
 }
 
 /* Setup hover for each Level button */
@@ -354,17 +351,9 @@ p {
     }
 
     .flip-card-front,
-    .flip-card-back {
-        width: 10em;
-        height: 10em;
-    }
-
+    .flip-card-back,
     .flip-card-front img,
-    .flip-card-back img {
-        width: 10em;
-        height: 10em;
-    }
-
+    .flip-card-back img,
     .flip-card {
         width: 10em;
         height: 10em;
@@ -386,8 +375,8 @@ p {
 
     #refresh-btn {
         font-size: large;
-        height: 30px;
-        width: 150px;
+        height: 2em;
+        width: 9.3em;
     }
 
     .pop-up h2,
@@ -398,14 +387,12 @@ p {
 
     #easy-btn,
     #hard-btn {
-        height: 50px;
-        width: 120px;
+        height: 3em;
         font-size: large;
     }
 
     #medium-btn {
-        height: 50px;
-        width: 140px;
+        height: 3em;
         font-size: large;
     }
 
@@ -418,41 +405,25 @@ p {
         font-size: x-large;
     }
 
+    #end-time,
+    #matches,
     #moves {
-
-        font-size: large;
-    }
-
-    #end-time {
-
-        font-size: large;
-    }
-
-    #matches {
-
         font-size: large;
     }
 
     #congrats-btn1 {
-        height: 50px;
-        width: 120px;
+        height: 3em;
         font-size: large;
     }
 
     #congrats-btn2 {
-        height: 50px;
-        width: 130px;
+        height: 3em;
         font-size: large;
     }
 
     #congrats-btn3 {
-        height: 50px;
-        width: 140px;
+        height: 3em;
         font-size: large;
-    }
-
-    #moves {
-        font-size: x-large;
     }
 
     #congrats h2 {
@@ -464,33 +435,24 @@ p {
 
 @media screen and (max-width: 800px) {
     .pop-up {
-        width: 400px;
+        width: 35em;
     }
 
     #myModal {
         font-size: xx-small;
     }
 
-    .flip-card-front,
-    .flip-card-back {
-        width: 90px;
-        height: 120px;
-    }
-
     .flip-card-front img,
-    .flip-card-back img {
-        width: 90px;
-        height: 120px;
-    }
-
+    .flip-card-back img,
+    .flip-card-front,
+    .flip-card-back,
     .flip-card {
-        width: 90px;
-        height: 120px;
+        width: 5.6em;
+        height: 7.5em;
     }
 
     .wrapper-game-area {
-        width: 400px;
-
+        width: 25em;
     }
 
     .score-area div {
@@ -505,8 +467,8 @@ p {
 
     #refresh-btn {
         font-size: large;
-        height: 30px;
-        width: 150px;
+        height: 2em;
+        width: 9.3em;
 
     }
 
@@ -519,43 +481,35 @@ p {
     #easy-btn,
     #medium-btn,
     #hard-btn {
-        height: 30px;
-        width: 100px;
+        height: 2em;
         font-size: small;
     }
 
     #congrats {
-        height: 400px;
-        width: 400px;
+        height: 25em;
+        width: 25em;
     }
 
     #congrats h2 {
         font-size: x-large;
     }
 
-    #congrats-btn1 {
-        height: 30px;
-        width: 100px;
-        font-size: small;
-    }
-
-    #congrats-btn2 {
-        height: 30px;
-        width: 100px;
-        font-size: small;
-    }
-
+    #congrats-btn1,
+    #congrats-btn2,
     #congrats-btn3 {
-        height: 30px;
-        width: 100px;
-        font-size: small;
+        height: 2em;
+        font-size: large;
+    }
+
+    #moves {
+        font-size: x-large;
     }
 }
 
 /* For small screens sizes 450px and down*/
 @media screen and (max-width: 450px) {
     .pop-up {
-        width: 300px;
+        width: 25em;
         font-size: smaller;
     }
 
@@ -565,24 +519,16 @@ p {
     }
 
     .flip-card-front,
-    .flip-card-back {
-        width: 70px;
-        height: 90px;
-    }
-
+    .flip-card-back,
     .flip-card-front img,
-    .flip-card-back img {
-        width: 70px;
-        height: 90px;
-    }
-
+    .flip-card-back img,
     .flip-card {
-        width: 70px;
-        height: 90px;
+        width: 4.3em;
+        height: 5.6em;
     }
 
     .wrapper-game-area {
-        width: 300px;
+        width: 18.7em;
 
     }
 
@@ -598,8 +544,8 @@ p {
 
     #refresh-btn {
         font-size: large;
-        height: 30px;
-        width: 150px;
+        height: 2em;
+        width: 9.3em;
     }
 
     .pop-up h2,
@@ -611,50 +557,29 @@ p {
     #easy-btn,
     #medium-btn,
     #hard-btn {
-        height: 25px;
-        width: 90px;
+        height: 1.5em;
         font-size: small;
     }
 
     #congrats {
-        height: 300px;
-        width: 300px;
+        height: 20em;
+        width: 20em;
     }
 
     #congrats h2 {
         font-size: large;
     }
 
-    #moves {
-
-        font-size: small;
-    }
-
-    #end-time {
-
-        font-size: small;
-    }
-
+    #moves,
+    #end-time,
     #matches {
-
         font-size: small;
     }
 
-    #congrats-btn1 {
-        height: 25px;
-        width: 98px;
-        font-size: small;
-    }
-
+    #congrats-btn1,
+    #congrats-btn2,
     #congrats-btn3 {
-        height: 25px;
-        width: 102px;
-        font-size: small;
-    }
-
-    #congrats-btn3 {
-        height: 25px;
-        width: 98px;
+        height: 1.5em;
         font-size: small;
     }
 }
